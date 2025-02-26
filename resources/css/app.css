@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.scroll-responsa {
+    --sb-track-color: #232e33;
+    --sb-thumb-color: #66944d;
+    --sb-size: 8px;
+  }
+  
+  .scroll-responsa::-webkit-scrollbar {
+    width: var(--sb-size);
+    height: var(--sb-size);
+  }
+  
+  .scroll-responsa::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 7px;
+  }
+  
+  .scroll-responsa::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 7px;
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    .scroll-responsa {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+

@@ -1,0 +1,17 @@
+<div class=" h-[200vh] flex flex-col justify-center relative">
+    <div class=" h-full max-h-[950px] w-full bg-red-400">
+        <div class=" bg-no-repeat bg-cover bg-center h-1/2" style="background-image: url('images/panel-future.webp');"></div>
+        <div class=" bg-no-repeat bg-cover bg-bottom h-1/2" style="background-image: url('images/trabajador-C.webp');"></div>
+    </div>
+    <div class="flex pl-[62px] justify-center flex-col w-full max-w-[686px] h-full max-h-[686px] bg-[#d9d9d9] absolute top-[35%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 ">
+        <h3 class=" w-full mb-[66px] max-w-[215px] h-full max-h-[84px] text-5xl leading-[83%]">Visión
+            de Futuro</h3>
+        <p class="w-full max-w-[562px] h-full max-h-[280px] text-justify text-xl leading-[111%]">
+            Con una base sólida de más de 30 años de experiencia, Solaris se proyecta como un referente en la transición hacia una economía de energía limpia en Honduras y América Central. Nuestra visión es continuar innovando y expandiendo nuestras soluciones energéticas para atender las necesidades de una sociedad en constante crecimiento.
+            <br><br>
+            Solaris se compromete a seguir liderando el mercado de energías renovables en Honduras y a inspirar a otras empresas y personas a adoptar prácticas más sostenibles y responsables. Nuestro objetivo es construir un futuro en el que cada hogar y negocio pueda acceder a energía limpia, asequible y eficiente, contribuyendo así a un mundo más sostenible.
+        </p>
+    </div>
+
+</div>
+</div>
