@@ -26,36 +26,36 @@
 
 <div class="swiper-container overflow-hidden">
     <div class="swiper-wrapper ">
-        <div class="swiper-slide bg-[#FBED4F] w-full flex xl:min-h-[875px] h-full">
+        <div class="swiper-slide bg-[#000F33] w-full flex xl:min-h-[875px] h-full">
             <div
-                class="w-full flex xl:min-h-[875px] h-full bg-[#FBED4F] z-[1000] relative px-[125px] py-[80px] justify-center items-center">
+                class="w-full flex xl:min-h-[875px] h-full bg-[#000F33] z-[1000] relative px-[125px] py-[80px] justify-center items-center">
                 <div
-                    class="bg-[#FBED4F] z-[1000] xl:min-h-[652px] h-full w-full max-w-[1360px] relative  flex justify-center items-center">
+                    class="bg-[#000F33] z-[1000] xl:min-h-[652px] h-full w-full max-w-[1360px] relative  flex justify-center items-center">
 
                     <div class="grid grid-cols-3 grid-rows-4 absolute h-full w-full bg-cover bg-bottom bg-no-repeat"
                         style="background-image: url('images/about-panel-trabajador.webp');">
-                        <div class="row-span-2 border-[#FBED4F] border-[10px]"></div>
-                        <div class="row-span-2 border-[#FBED4F] border-[10px]"></div>
-                        <div class="col-span-2 border-[#FBED4F] border-[10px] row-span-2 col-start-1 row-start-3">3
+                        <div class="row-span-2 border-[#000F33] border-[10px]"></div>
+                        <div class="row-span-2 border-[#000F33] border-[10px]"></div>
+                        <div class="col-span-2 border-[#000F33] border-[10px] row-span-2 col-start-1 row-start-3">3
                         </div>
-                        <div class="row-span-4 border-[#FBED4F] border-[10px] col-start-3 row-start-1"></div>
+                        <div class="row-span-4 border-[#000F33] border-[10px] col-start-3 row-start-1"></div>
                     </div>
                     <div class="grid grid-cols-3 grid-rows-4 absolute h-full w-full bg-cover bg-bottom bg-no-repeat">
-                        <div class="row-span-2 border-[#FBED4F] rounded-[50px] border-[10px]"></div>
-                        <div class="row-span-2 border-[#FBED4F] rounded-[50px] border-[10px]"></div>
+                        <div class="row-span-2 border-[#000F33] rounded-[50px] border-[10px]"></div>
+                        <div class="row-span-2 border-[#000F33] rounded-[50px] border-[10px]"></div>
                         <div
-                            class="col-span-2 border-[#FBED4F] rounded-[50px] border-[10px] row-span-2 col-start-1 row-start-3">
+                            class="col-span-2 border-[#000F33] rounded-[50px] border-[10px] row-span-2 col-start-1 row-start-3">
                         </div>
-                        <div class="row-span-4 border-[#FBED4F] rounded-[50px] border-[10px] col-start-3 row-start-1">
+                        <div class="row-span-4 border-[#000F33] rounded-[50px] border-[10px] col-start-3 row-start-1">
                         </div>
                     </div>
                     <div class="grid grid-cols-3 grid-rows-4 absolute h-full w-full bg-cover bg-bottom bg-no-repeat">
-                        <div class="row-span-2 border-[#FBED4F] rounded-[30px] border-[10px]"></div>
-                        <div class="row-span-2 border-[#FBED4F] rounded-[30px] border-[10px]"></div>
+                        <div class="row-span-2 border-[#000F33] rounded-[30px] border-[10px]"></div>
+                        <div class="row-span-2 border-[#000F33] rounded-[30px] border-[10px]"></div>
                         <div
-                            class="col-span-2 border-[#FBED4F] rounded-[30px] border-[10px] row-span-2 col-start-1 row-start-3">
+                            class="col-span-2 border-[#000F33] rounded-[30px] border-[10px] row-span-2 col-start-1 row-start-3">
                         </div>
-                        <div class="row-span-4 border-[#FBED4F] rounded-[30px] border-[10px] col-start-3 row-start-1">
+                        <div class="row-span-4 border-[#000F33] rounded-[30px] border-[10px] col-start-3 row-start-1">
                         </div>
                     </div>
                     <div

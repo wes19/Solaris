@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Mi Sitio Web')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -18,7 +17,7 @@
 
 <body class="font-raleway">
     <video autoplay muted loop id="background-video">
-        <source src="{{ asset('backgrounds/CIELO1.webm') }}" type="video/webm">
+        <source src="{{ asset('backgrounds/CIELO.webm') }}" type="video/webm">
         Tu navegador no soporta el elemento de video.
     </video>
     <div class="w-full min-h-[1022px] absolute top-0 z-[-1]"
@@ -29,7 +28,7 @@
         <nav class="pt-4 px-10">
             <div class="mx-auto w-full flex justify-between items-center">
                 <div class="flex lg:w-[10%] w-full items-center">
-                    <img src="{{ asset('images/Logo-blanco-Solaris.png') }}" alt="Logo" class="h-16">
+                    <img src="{{ asset('images/Logo-blanco-Solaris.png') }}" alt="Logo" class="h-12">
                 </div>
                 <ul class="hidden lg:flex space-x-4 md:space-x-10 lg:space-x-20 w-full justify-center">
                     <li><a href='#' class="text-white hover:text-gray-300">INICIO</a></li>
@@ -38,6 +37,11 @@
                     <li><a href="#" class="text-white hover:text-gray-300">PROMOCIONES</a></li>
                     <li><a href="#" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
                 </ul>
+                <div class="lg:flex items-center space-x-4">
+                    <a href="URL_DE_LA_PAGINA_DE_COMPRAS" class="relative">
+                        <img src="{{ asset('images/carrito.webp') }}" alt="Carrito" class="h-8 w-8">
+                    </a>
+                </div>                
                 <div class="lg:hidden">
                     <button id="menu-button" class="text-white focus:outline-none">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
