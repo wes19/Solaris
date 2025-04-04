@@ -38,8 +38,8 @@
                     <li><a href="#" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
                 </ul>
                 <div class="lg:flex items-center space-x-4">
-                    <a href="URL_DE_LA_PAGINA_DE_COMPRAS" class="relative">
-                        <img src="{{ asset('images/carrito.webp') }}" alt="Carrito" class="h-8 w-8">
+                    <a href="#" class="relative">
+                        <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
                     </a>
                 </div>                
                 <div class="lg:hidden">
