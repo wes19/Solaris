@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Contacto;
-use App\Distribuidore;
-use App\Solicitude;
+use App\Models\Contacto;
+use App\Models\Distribuidore;
+use App\Models\Solicitude;
 use Illuminate\Http\Request;
 use App\Mail\Contactos;
 use App\Mail\WorkUsMessage;
@@ -18,21 +18,19 @@ class ContactController extends Controller
 {
     public function contactForm(Request $request){
         $messageContact = request()->validate([
-            /* reglas de requerimientos para los campos */
             'nombre' => 'required',
             'correo' => 'required|email',
             'telefono' => 'required|numeric',
             'ciudad' => 'required',
             'pais' => 'required',
             'mensaje' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ],[
-            /* personalizar mensjaes a mostrar para errores */
             'name.required' => __('Necesitamos que ingrese su nombre para continuar'),
             'email.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
         ]);
 
-        DB::table('Contactos')->insert(
+        DB::table('contactos')->insert(
             [
                 'nombre' => $messageContact['nombre'],
                 'correo' => $messageContact['correo'],
@@ -42,18 +40,19 @@ class ContactController extends Controller
                 'mensaje' => $messageContact['mensaje'],
             ]
         );
-        
-        Mail::to('info@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
-        Mail::to('jefecomercial@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
+
+        Mail::to('desarrollo@24studiohn.com')->send(new Contactos($messageContact));
+        //Mail::to('info@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
+        //Mail::to('jefecomercial@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
         //Mail::to('ingridcho@24studiohn.com')->send(new Contactos($messageContact));/* archivo Mail */
-        Mail::to('ivan.pastor@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
-        Mail::to('desarrollo@24studiohn.com')->send(new Contactos($messageContact));/* archivo Mail */
+        //Mail::to('ivan.pastor@solarishn.com')->send(new Contactos($messageContact));/* archivo Mail */
         
         return view('layouts.envio');
     }
+
+
     public function distriForm(Request $request){
         $messageContact = request()->validate([
-            /* reglas de requerimientos para los campos */
             'nombre' => 'required',
             'empresa' => 'required',
             'correo' => 'required|email',
@@ -61,9 +60,8 @@ class ContactController extends Controller
             'ciudad' => 'required',
             'depto' => 'required',
             'mensaje' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ],[
-            /* personalizar mensjaes a mostrar para errores */
             'name.required' => __('Necesitamos que ingrese su nombre para continuar'),
             'email.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
         ]);
@@ -80,17 +78,17 @@ class ContactController extends Controller
             ]
         );
         
-        
-        Mail::to('info@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
-        Mail::to('jefecomercial@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
+        Mail::to('desarrollo@24studiohn.com')->send(new Distribuidor($messageContact));
+        //Mail::to('info@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
+        //Mail::to('jefecomercial@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
         //Mail::to('ingridcho@24studiohn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
-        Mail::to('ivan.pastor@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
-        Mail::to('desarrollo@24studiohn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
+        //Mail::to('ivan.pastor@solarishn.com')->send(new Distribuidor($messageContact));/* archivo Mail */
         
         return view('layouts.envio');
     }
+
+
     public function workUsForm(Request $request){
-        // dd($request);
         $messageWorkUs = request()->validate([
             'nombre' => 'required',
             'correo'  => 'required',
@@ -101,7 +99,6 @@ class ContactController extends Controller
             'g-recaptcha-response' => 'required|captcha',
 
         ],[
-            /* perzonalizar mensajes de required */
             'phone.required' => 'Solo utilizar números.',
         ]);
         $id = request()->correo;
@@ -113,7 +110,7 @@ class ContactController extends Controller
             $fileNameWithExt = $request->file('file')->getClientOriginalName();
             $fileNameWithExt = str_replace(" ", "_", $fileNameWithExt);
             $pathFile = $request->file('file')->store('cvs', "public");
-            $pathtofile =$request->file('file')->move('cvs',$fileNameWithExt);
+            $pathtofile =$request->file('file')->move('cvs', $fileNameWithExt);
     
             DB::table('solicitudes')->insert(
                 [
@@ -125,14 +122,13 @@ class ContactController extends Controller
                     'archivo' => $pathFile,
                 ]
             );
-            
-            Mail::to('info@solarishn.com')->send(new WorkUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
-            //Mail::to('ingridcho@24studiohn.com')->send(new WorkUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
-            Mail::to('ivan.pastor@solarishn.com')->send(new WorkUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
-            Mail::to('desarrollo@24studiohn.com')->send(new WorkUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
+            Mail::to('desarrollo@24studiohn.com')->send(new workUsMessage($messageWorkUs, $pathtofile));
+            //Mail::to('info@solarishn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
+            //Mail::to('ingridcho@24studiohn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
+            //Mail::to('ivan.pastor@solarishn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
             
             return view('layouts.envio');
         }
-        
     }
+    
 }

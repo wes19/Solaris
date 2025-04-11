@@ -1,37 +1,90 @@
-<div class=" h-full flex justify-center pb-24"
-    style="border: 1px solid #000;
-background: linear-gradient(180deg, rgba(191, 241, 255, 0.44) 0%, rgba(138, 255, 237, 0.44) 50.5%, rgba(255, 137, 0, 0.44) 100%);">
-    <div class=" w-full max-w-[1280px] h-full border-x-[1px] border-black flex pt-[10%]">
-        <div class=" w-[15%] flex justify-end">
-            <svg xmlns="http://www.w3.org/2000/svg" width="124" height="123" viewBox="0 0 124 123" fill="none">
-                <g clip-path="url(#clip0_14_1506)">
-                    <path
-                        d="M0 122.78V100.78L0.43 100.48C2.58 99.01 50.34 66.3 59.53 60.76C50.28 55.3 2.59 23.11 0.44 21.66L0 21.36V0L78.05 49.64V72.92L0 122.78ZM2 101.84V119.13L76.05 71.83V50.75L2 3.64V20.3C7.26 23.84 57.45 57.68 61.63 59.64L62.21 59.91V61.6L61.64 61.87C57.56 63.83 7.24 98.26 2 101.84Z"
-                        fill="#24317B" />
-                    <path
-                        d="M45.7102 122.78V100.78L46.1402 100.48C48.2902 99.01 96.0502 66.3 105.24 60.76C95.9802 55.3 48.2902 23.11 46.1402 21.66L45.7002 21.36V0L123.75 49.64V72.92L45.7002 122.78H45.7102ZM47.7102 101.84V119.13L121.76 71.83V50.75L47.7102 3.64V20.3C52.9702 23.84 103.16 57.68 107.34 59.64L107.92 59.91V61.6L107.35 61.87C103.27 63.83 52.9502 98.26 47.7102 101.84Z"
-                        fill="#24317B" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_14_1506">
-                        <rect width="123.75" height="122.78" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-        </div>
-        <div class=" w-full flex flex-col text-[#24317B]">
-            <h3 class=" ml-8 mb-12 text-[96px] font-semibold leading-[90%] w-full max-w-[501px] h-full max-h-[176px]">Soluciones
-                de Solaris</h3>
-            <p class=" ml-6 w-full max-w-[432px] h-full max-h-[437px] font-normal leading-[103%] text-xl">Solaris ofrece una gama completa de soluciones energéticas, que incluye la instalación de sistemas de
-                paneles solares para hogares, empresas e industrias.
-                Nuestros servicios abarcan desde diseños de ingeniería, estudios de factibilidad, Suministro e
-                instalación, monitoreo y mantenimiento. Cada solución es adaptada a las necesidades del cliente,
-                asegurando el más rápido retorno sobre la inversión.
-                <br><br>
-                Además, Solaris brinda servicios de asesoría y consultoría en proyectos de energía renovable, ayudando a
-                organizaciones a transitar hacia prácticas más verdes y sostenibles. Nuestros clientes confían en
-                nuestra experiencia y dedicación para implementar soluciones energéticas que no solo les generen ahorro,
-                sino que también contribuyan al bienestar ambiental.</p>
+
+
+
+<div class="flex h-screen w-full">
+    <!-- Contenedor Izquierdo (30%) -->
+    <div class="w-[30%] bg-red-500 flex items-center justify-center p-6">
+        <!-- Contenedor Interno Negro -->
+        <div class="bg-black p-5 rounded-[2px] w-full">
+            <ul class="text-white text-[18px] leading-[34px] font-normal space-y-2">
+                @php
+                    $items = [
+                        "Soluciones de Eficiencia Energética",
+                        "Climatización Solar de Piscinas",
+                        "Instalación de Sistemas de Respaldo",
+                        "Instalación de Sistemas Aislados",
+                        "Instalación de Sistemas Térmicos",
+                        "Instalación de Sistemas de Bombeo",
+                        "Instalación de Sistemas de Autoconsumo",
+                        "Sistemas Híbridos",
+                        "Mantenimiento preventivo",
+                        "Mantenimiento correctivo",
+                        "Sistemas de refrigeración solar"
+                    ];
+                @endphp
+
+                @foreach($items as $index => $item)
+                    <li class="p-1 cursor-pointer hover:underline" onclick="openModal({{ $index }})">
+                        ► {{ $item }}
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </div>
+
+    <!-- Contenedor Derecho (70%) -->
+    <div id="contenedor-derecho" class="w-[70%] bg-blue-500 flex items-center">
+        <div class="flex flex-col px-10 py-12">
+            <h1 class="uppercase text-[120px] leading-[86%] font-extrabold text-white">
+                Productos<br>y Soluciones
+            </h1>
+            <p class="text-[#24317B] text-[24px] font-normal leading-[103%] mt-16 text-left mr-48">
+                Solaris ofrece una gama completa de soluciones energéticas, que incluye la instalación de sistemas de paneles solares para hogares, empresas e industrias.
+                Nuestros servicios abarcan desde diseños de ingeniería, estudios de factibilidad, Suministro e instalación, monitoreo y mantenimiento. Cada solución es adaptada a las necesidades del cliente, asegurando el más rápido retorno sobre la inversión.
+                <br><br>
+                Además, Solaris brinda servicios de asesoría y consultoría en proyectos de energía renovable, ayudando a organizaciones a transitar hacia prácticas más verdes y sostenibles. Nuestros clientes confían en nuestra experiencia y dedicación para implementar soluciones energéticas que no solo les generen ahorro, sino que también contribuyan al bienestar ambiental.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modales (uno por ítem) -->
+    @foreach($items as $index => $item)
+        <div id="modal-{{ $index }}" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-end">
+            <div class="bg-white p-8 rounded-lg w-[60%] max-w-[800px] relative">
+                <button class="absolute top-2 right-4 text-gray-700 text-2xl font-bold" onclick="closeModal({{ $index }})">&times;</button>
+                <h2 class="text-2xl font-bold mb-4">{{ $item }}</h2>
+                <p class="text-gray-700">Aquí podrías poner una descripción específica sobre "{{ $item }}".</p>
+            </div>
+        </div>
+    @endforeach
 </div>
+
+<!-- Script Vanilla JS -->
+<script>
+    function openModal(index) {
+        // Ocultar el contenedor derecho
+        document.getElementById('contenedor-derecho').classList.add('hidden');
+        
+        // Mostrar el modal correspondiente
+        document.getElementById(`modal-${index}`).classList.remove('hidden');
+    }
+
+    function closeModal(index) {
+        // Mostrar el contenedor derecho de nuevo
+        document.getElementById('contenedor-derecho').classList.remove('hidden');
+        
+        // Ocultar el modal correspondiente
+        document.getElementById(`modal-${index}`).classList.add('hidden');
+    }
+
+    // Cerrar al hacer click fuera
+    window.addEventListener('click', function(e) {
+        for (let i = 0; i < 11; i++) {
+            const modal = document.getElementById(`modal-${i}`);
+            if (modal && !modal.classList.contains('hidden') && e.target === modal) {
+                modal.classList.add('hidden');
+                document.getElementById('contenedor-derecho').classList.remove('hidden'); // Mostrar el contenedor derecho
+            }
+        }
+    });
+</script>

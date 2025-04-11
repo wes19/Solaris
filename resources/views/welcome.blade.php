@@ -11,10 +11,10 @@
     @include('sections.projects-list')
     @include('sections.projects-second')
     @include('sections.responsability')
-    @include('sections.solutions')
-    @include('sections.cases')
+    @include('sections.solutions');
     @include('sections.future')
     @include('sections.testimonials')
+    @include('sections.marcas')
     @include('sections.contact')
 @endsection
 

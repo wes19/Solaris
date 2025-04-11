@@ -41,3 +41,17 @@
     }
   }
 
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .msg-mail {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      background: #699b4e;
+      z-index: 10000000;
+  }
