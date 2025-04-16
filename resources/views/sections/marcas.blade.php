@@ -1,4 +1,4 @@
-<div class="p-4">
+<div class="p-4 bg-white" id="RSE">
     <div class="grid grid-cols-2 gap-4">
       <div class="p-12">
         <h2 class="text-[#24317B] text-[93px] font-bold leading-[100%]">Nuestras Marcas Asociadas</h2>
@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="p-8">
+  <div class="p-8 bg-white">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
       <img src="images/sol.webp" alt="Sol" class="h-20">
       <img src="images/morningstar.webp" alt="Morningstar" class="h-20">

@@ -12,12 +12,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-raleway">
-    <video autoplay muted loop id="background-video">
-        <source src="{{ asset('backgrounds/CIELO.webm') }}" type="video/webm">
+    <video muted loop id="background-video">
+        <source src="{{ asset('backgrounds/CIELO1.webm') }}" type="video/webm">
         Tu navegador no soporta el elemento de video.
     </video>
     <div class="w-full min-h-[1022px] absolute top-0 z-[-1]"
@@ -28,20 +29,24 @@
         <nav class="pt-4 px-10">
             <div class="mx-auto w-full flex justify-between items-center">
                 <div class="flex lg:w-[10%] w-full items-center">
-                    <img src="{{ asset('images/Logo-blanco-Solaris.png') }}" alt="Logo" class="h-12">
-                </div>
-                <ul class="hidden lg:flex space-x-4 md:space-x-10 lg:space-x-20 w-full justify-center">
-                    <li><a href='#' class="text-white hover:text-gray-300">INICIO</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-300">NOSOTROS</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-300">PROYECTOS</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-300">PROMOCIONES</a></li>
-                    <li><a href="#" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
-                </ul>
-                <div class="lg:flex items-center space-x-4">
-                    <a href="#" class="relative">
-                        <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
+                    <a href="#hero">
+                        <img src="{{ asset('images/Logo-blanco-Solaris.png') }}" alt="Logo" class="h-12">
                     </a>
                 </div>                
+                <ul class="hidden lg:flex space-x-6 md:space-x-8 lg:space-x-10 w-full justify-center">
+                    <li><a href='#hero' class="text-white hover:text-gray-300">INICIO</a></li>
+                    <li><a href="#sobre-nosotros" class="text-white hover:text-gray-300">NOSOTROS</a></li>
+                    <li><a href="#proyectos" class="text-white hover:text-gray-300">PROYECTOS</a></li>
+                    <li><a href="#soluciones" class="text-white hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
+                    <li><a href="#blog" class="text-white hover:text-gray-300">BLOG</a></li>
+                    <li><a href="#RSE" class="text-white hover:text-gray-300">RSE</a></li>
+                    <li><a href="#contactanos" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
+                </ul>
+                <div class="lg:flex items-center space-x-4">
+                    <a href="https://solarismarkethn.com/" class="relative">
+                      <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
+                    </a>
+                </div>                                
                 <div class="lg:hidden">
                     <button id="menu-button" class="text-white focus:outline-none">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -59,11 +64,13 @@
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
     <div id="mobile-menu" class="fixed z-[2000000] top-0 left-0 w-64 h-full bg-gray-900 text-white transform -translate-x-full transition-transform duration-300">
         <ul class="flex flex-col space-y-4 mt-4 p-4">
-            <li><a href='#' class="hover:text-gray-300">INICIO</a></li>
-            <li><a href="#" class="hover:text-gray-300">NOSOTROS</a></li>
-            <li><a href="#" class="hover:text-gray-300">PROYECTOS</a></li>
-            <li><a href="#" class="hover:text-gray-300">PROMOCIONES</a></li>
-            <li><a href="#" class="hover:text-gray-300">CONTÁCTANOS</a></li>
+            <li><a href='#hero' class="hover:text-gray-300">INICIO</a></li>
+            <li><a href="#sobre-nosotros" class="hover:text-gray-300">NOSOTROS</a></li>
+            <li><a href="#proyectos" class="hover:text-gray-300">PROYECTOS</a></li>
+            <li><a href="#soluciones" class="hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
+            <li><a href="#blog" class="hover:text-gray-300">BLOG</a></li>
+            <li><a href="#RSE" class="hover:text-gray-300">RSE</a></li>
+            <li><a href="#contactanos" class="hover:text-gray-300">CONTÁCTANOS</a></li>
         </ul>
     </div>
 
@@ -72,12 +79,12 @@
     </main>
 
     <footer>
-        <div class="w-full h-[198px] relative flex flex-col justify-end bg-red-400 items-end">
-            <div class=" w-full h-[150px] overflow-hidden flex items-center justify-center gap-11 bg-slate-600">
+        <div class="w-full relative flex flex-col justify-end items-end">
+            <!--<div class=" w-full h-[150px] overflow-hidden flex items-center justify-center gap-11 bg-slate-600">
                 <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
                 <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
                 <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
-            </div>
+            </div>-->
             <!-- <div class="w-full h-[134px] left-0 top-[64px]  bg-black"></div> -->
             <div class=" flex justify-center items-center bg-black w-full h-[134px]">
                 <span class="text-white text-2xl font-normal font-['Raleway'] capitalize leading-normal">
@@ -153,6 +160,18 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+
 </body>
 
 </html>

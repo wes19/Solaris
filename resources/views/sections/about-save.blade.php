@@ -18,17 +18,17 @@
     .swiper-button-prev {
         z-index: 1002;
         position: absolute;
-        color: white !important;
+        color: #FFFFFF
     }
 </style>
 
-<div class="swiper-container overflow-hidden mb-96">
+<div class="swiper-container overflow-hidden">
     <div class="swiper-wrapper">
 
         <!--Nuestro Brand-->
         <div class="swiper-slide bg-[#000F33] w-full flex xl:min-h-[875px] h-full">
             <div class="w-full flex xl:min-h-[875px] h-full bg-[#000F33] z-[1000] relative px-[125px] py-[80px] justify-center items-center">
-                <div class="bg-[#000F33] z-[1000] xl:min-h-[652px] h-full w-full max-w-[1360px] relative flex justify-center items-center">
+                <div class="bg-[#000F33] z-[1000] xl:min-h-[652px] h-full w-full max-w-[1360px] relative  flex justify-center items-center">
                     <div class="grid grid-cols-3 grid-rows-4 absolute h-full w-full bg-contain bg-bottom bg-no-repeat"
                         style="background-image: url('images/about.webp');">
                     </div>
@@ -67,6 +67,7 @@
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
 
         </div>
@@ -223,3 +224,21 @@
     </div>
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            // },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+</script>

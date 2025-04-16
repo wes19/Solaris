@@ -64,7 +64,7 @@
         </div>
 
 
-        <div class="swiper-slide bg-no-repeat bg-contain w-full flex xl:min-h-[875px] relative"
+        <div class="swiper-slide bg-no-repeat bg-contain w-full flex xl:min-h-[875px] relative bg-white"
             style="background-image: url('images/arbolito.webp');">
    
             <div class="ml-auto text-left mr-8 max-w-xl w-full">
@@ -97,7 +97,7 @@
         </div>
 
 
-        <div class="swiper-slide w-full flex xl:min-h-[875px] h-full relative">
+        <div class="swiper-slide w-full flex xl:min-h-[875px] h-full relative bg-white">
             
             <div class="w-full xl:w-1/2 flex flex-col justify-start ml-auto">
                 <div class="w-full text-center mb-4">

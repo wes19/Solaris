@@ -38,7 +38,8 @@ class WorkUsMessage extends Mailable
     public function build(): self
     {
         return $this->view('layouts.messageWorkUs')->attach($this->pathFile, [
-            'as' => $this->messageWorkUs['nombre'] . '.pdf'
-        ]);
+            'as' => $this->messageWorkUs['nombre'] . '.' . pathinfo($this->pathFile, PATHINFO_EXTENSION),
+            'mime' => mime_content_type($this->pathFile)
+        ]);        
     }
 }

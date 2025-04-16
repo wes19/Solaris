@@ -14,6 +14,7 @@
     @include('sections.solutions');
     @include('sections.future')
     @include('sections.testimonials')
+    @include('sections.blogs')
     @include('sections.marcas')
     @include('sections.contact')
 @endsection

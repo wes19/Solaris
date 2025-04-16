@@ -96,21 +96,21 @@ class ContactController extends Controller
             'ciudad'  =>  'required',
             'exp' => 'not_in:0|required',
             'file' => 'required|max:10000|mimes:pdf,doc,docx,pptx',
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
 
         ],[
-            'phone.required' => 'Solo utilizar números.',
+            'telefono.required' => 'Solo utilizar números.',
         ]);
         $id = request()->correo;
         $existe = DB::table('solicitudes')->where('correo', $id)->exists();;
        
-        if($existe == $id){
+        if($existe){
             return view('layouts.envio');
         }else{
-            $fileNameWithExt = $request->file('file')->getClientOriginalName();
-            $fileNameWithExt = str_replace(" ", "_", $fileNameWithExt);
-            $pathFile = $request->file('file')->store('cvs', "public");
-            $pathtofile =$request->file('file')->move('cvs', $fileNameWithExt);
+            $file = $request->file('file');
+            $fileNameWithExt = str_replace(" ", "_", $file->getClientOriginalName());
+            $pathFile = $file->storeAs('public/cvs', $fileNameWithExt);
+            $absolutePath = storage_path('app/public/cvs/' . $fileNameWithExt);            
     
             DB::table('solicitudes')->insert(
                 [
@@ -122,7 +122,7 @@ class ContactController extends Controller
                     'archivo' => $pathFile,
                 ]
             );
-            Mail::to('desarrollo@24studiohn.com')->send(new workUsMessage($messageWorkUs, $pathtofile));
+            Mail::to('desarrollo@24studiohn.com')->send(new workUsMessage($messageWorkUs, $absolutePath));
             //Mail::to('info@solarishn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
             //Mail::to('ingridcho@24studiohn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */
             //Mail::to('ivan.pastor@solarishn.com')->send(new workUsMessage($messageWorkUs,$pathtofile));/* archivo Mail */

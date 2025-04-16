@@ -55,3 +55,12 @@
       background: #699b4e;
       z-index: 10000000;
   }
+
+  [x-cloak] {
+    display: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+

@@ -3,8 +3,8 @@
 @section('title', 'Política de Privacidad')
 
 @section('content')
-<div class="h-[100vh] mx-20">
-    <h1 class="text-3xl font-bold mb-4 mt-60 ">Política de Privacidad</h1>
+<div class="min-h-screen mx-20 my-10">
+    <h1 class="text-3xl font-bold mb-4 mt-40 ">Política de Privacidad</h1>
     <p>La presente Política de Privacidad establece los términos en que Sistemas Solares de Honduras, S.A. (Solaris) usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta empresa está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p>
     <p><strong>Información que es recogida</strong></p>
     <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp; su dirección de correo electrónico e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p>

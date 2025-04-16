@@ -1,8 +1,5 @@
-<div class="h-[100vh] flex flex-col justify-center relative">
-    <div class="h-full w-full">
-
-        <div class="bg-no-repeat bg-cover bg-center h-full" style="background-image: url('images/plaza-ciudad-nueva.webp');"></div>
-    </div>
+<div class="relative h-screen w-full">
+    <div class="absolute inset-0 bg-no-repeat bg-cover bg-center" style="background-image: url('images/plaza-ciudad-nueva.webp');"></div>
     <div class="flex pl-[62px] justify-center flex-col w-full max-w-[686px] h-full max-h-[686px] bg-[#24317B] absolute bottom-0 left-[50%] transform -translate-x-1/2 translate-y-[50%]">
         <h3 class="w-full mb-[66px] max-w-[215px] h-full max-h-[84px] text-5xl leading-[83%] text-[#FFF] font-semibold">Visión de Futuro</h3>
         <p class="w-full max-w-[562px] h-full max-h-[280px] text-justify text-xl leading-[111%] text-[#FFF] font-normal">

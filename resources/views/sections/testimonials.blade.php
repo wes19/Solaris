@@ -24,10 +24,8 @@
 
                         <div class="swiper-slide flex justify-center items-center ">
                             <div class="relative w-[320px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
-                                <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
-                                    <source src="{{ asset('backgrounds/CIELO2.webm') }}" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl z-0"> 
                                 <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
                                     <img src="{{ asset('images/cristina-rubio.webp') }}" alt="Imagen de testimonio" class="p-4 mb-4">
                                     <p class="mb-[45px] w-full max-w-[235px] text-2xl font-semibold leading-[111%]">Cristina Rubio</p> 
@@ -41,10 +39,8 @@
 
                         <div class="swiper-slide flex justify-center items-center ">
                             <div class="relative w-[320px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
-                                <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
-                                    <source src="{{ asset('backgrounds/CIELO2.webm') }}" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl z-0"> 
                                 <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
                                     <img src="{{ asset('images/vladimir-avila.webp') }}" alt="Imagen de testimonio" class="p-4 mb-4">
                                     <p class="mb-[45px] w-full max-w-[235px] text-2xl font-semibold leading-[111%]">Vladimir Ávila</p> 
@@ -59,10 +55,8 @@
 
                         <div class="swiper-slide flex justify-center items-center ">
                             <div class="relative w-[320px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
-                                <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
-                                    <source src="{{ asset('backgrounds/CIELO2.webm') }}" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">                           
                                 <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
                                     <img src="{{ asset('images/midence-soto-pierrefeu.webp') }}" alt="Imagen de testimonio" class="p-4 mb-4">
                                     <p class="mb-[45px] w-full max-w-[235px] text-2xl font-semibold leading-[111%]">Grupo Midence Soto Pierrefeu</p> 
@@ -76,10 +70,8 @@
 
                         <div class="swiper-slide flex justify-center items-center ">
                             <div class="relative w-[320px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
-                                <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
-                                    <source src="{{ asset('backgrounds/CIELO2.webm') }}" type="video/webm">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
+                                class="absolute inset-0 w-full h-full object-cover rounded-xl z-0"> 
                                 <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
                                     <img src="{{ asset('images/leonardo-espinal.webp') }}" alt="Imagen de testimonio" class="p-4 mb-4">
                                     <p class="mb-[45px] w-full max-w-[235px] text-2xl font-semibold leading-[111%]">Leonardo Espinal</p> 

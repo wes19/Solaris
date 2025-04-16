@@ -1,4 +1,4 @@
-<div class="h-full w-full px-20 py-20 text-[#24317B]">
+<div class="h-full w-full px-20 py-20 text-[#24317B] bg-[#FFFFFF]">
 
     <div class="w-full flex flex-row justify-between items-start gap-32">
       
