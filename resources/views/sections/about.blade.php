@@ -101,7 +101,7 @@
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-4 col-start-4 row-start-1"></div>
                 <div
                     class=" absolute top-0 2xl:right-20 lg:right-5 h-[65%] w-[33%] flex flex-col justify-center  z-40 bg-[#000F33] text-[#FBED4F]">
-                    <p class=" xl:text-xl lg:text-md leading-[17.76px]">
+                    <p class="text-[22px] leading-[25.76px]">
                         La misión de Solaris es
                         proporcionar soluciones energéticas que sean eficientes, accesibles y ambientalmente
                         responsables.
@@ -156,7 +156,7 @@
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-4 col-start-4 row-start-1"></div>
                 <div
                     class=" absolute top-0 2xl:right-20 lg:right-5 h-[65%] w-[33%] flex flex-col z-40 bg-[#000F33] text-[#FBED4F]">
-                    <p class=" xl:text-xl lg:text-md leading-[17.76px] mt-12">
+                    <p class="text-[25px] leading-[28.76px] mt-12">
                         Ser la marca de referencia en el ámbito de Eficiencia Energética.</p>
                 </div>
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-3 col-start-5 row-start-1"></div>
@@ -200,7 +200,7 @@
                 <div
                     class=" absolute top-0 2xl:right-20 lg:right-5 h-[65%] w-[33%] flex flex-col z-40 bg-[#000F33] text-[#FBED4F]">
                   
-                    <ul class="xl:text-xl lg:text-md leading-[17.76px] mt-12">
+                    <ul class="text-[30px] leading-[35.76px] mt-12">
                         Nuestros Valores:
                         <li>- Excelencia</li>
                         <li>- Innovación</li>

@@ -8,24 +8,10 @@
         </h3>          
         <p class="text-[28px] leading-[106%] font-medium">
           Durante nuestra trayectoria de más de 30 años, Solaris ha llevado a cabo una serie de proyectos destacados que han transformado comunidades enteras en Honduras. Nos hemos dedicado a llevar energía limpia y asequible a zonas rurales y urbanas, colaborando con organizaciones locales y socios internacionales para maximizar el impacto positivo de nuestras iniciativas.
-          <br><br>
-          Además de nuestros proyectos de energía, Solaris también se ha comprometido con la reforestación y la restauración de ecosistemas. Como parte de nuestras contribuciones sociales, hemos adoptado un modelo de responsabilidad compartida, en el que cada miembro de Solaris se involucra activamente en actividades de voluntariado y sostenibilidad. Gracias a nuestro programa de reforestación, por cada KWp de energía solar vendido, plantamos un árbol, involucrando a colaboradores y sus familias en esta causa.
         </p>
       </div>
-  
       <div class="w-1/2 mt-[120px] text-[28px] font-medium leading-[106%]">
-        <p>Como proyectos destacados podemos mencionar trabajos con empresas importantes como:</p>
-        <ul class="list-disc list-inside mt-4">
-          <li>Grupo MSP</li>
-          <li>UNITEC</li>
-          <li>BAC</li>
-          <li>Grupo UNICOMER</li>
-          <li>Hospital, Clínica y Óptica Santa Lucia</li>
-          <li>Centro de Cáncer Emma Romero de Callejas</li>
-          <li>Gasolineras</li>
-          <li>Escuela Elvel</li>
-          <li>Entre otros.</li>
-        </ul>
+        <p>Además de nuestros proyectos de energía, Solaris también se ha comprometido con la reforestación y la restauración de ecosistemas. Como parte de nuestras contribuciones sociales, hemos adoptado un modelo de responsabilidad compartida, en el que cada miembro de Solaris se involucra activamente en actividades de voluntariado y sostenibilidad. Gracias a nuestro programa de reforestación, por cada KWp de energía solar vendido, plantamos un árbol, involucrando a colaboradores y sus familias en esta causa.</p>
       </div>
     </div>
 
@@ -67,7 +53,7 @@
           </div> 
 
           <div class="text-center">
-            <a href="#" target="_blank">
+            <a href="https://youtu.be/4gAgfTqWSHc" target="_blank">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/data-center.webp') }}" alt="Data Center" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -83,7 +69,7 @@
           </div> 
 
           <div class="text-center">
-            <a href="#" target="_blank">
+            <a href="https://youtu.be/bEis32M3TZs" target="_blank">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/piscina-olimpica.webp') }}" alt="Piscina Olimpica" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -100,7 +86,7 @@
           </div> 
 
           <div class="text-center">
-            <a href="#" target="_blank">
+            <a href="#">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/la-curacao.webp') }}" alt="La Curacao" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -116,7 +102,7 @@
           </div> 
 
           <div class="text-center">
-            <a href="#" target="_blank">
+            <a href="https://youtu.be/KETw_tJMydo" target="_blank">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/plaza-ciudad-nueva.webp') }}" alt="Plaza Ciudad Nueva" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -132,7 +118,7 @@
           </div> 
 
           <div class="text-center">
-            <a href="https://www.youtube.com/watch?v=Cu-tKp0HraU" target="_blank">
+            <a href="#">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/midence-soto-2.webp') }}" alt="Proyecto Midence Soto" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -143,12 +129,12 @@
               </div>
             </a>
             <div class="mt-2 text-[#24317B] text-[20px] font-semibold">
-              Proyecto Midence Soto
+              Hospital Emma Romero Callejas
             </div>
           </div> 
 
           <div class="text-center">
-            <a href="" target="_blank">
+            <a href="https://youtu.be/Iy37HEKsbn8?si=CoAoJZ6CMJk9cmYO" target="_blank">
               <div class="bg-white shadow-md rounded-xl overflow-hidden relative" style="height: 250px;">
                 <img src="{{ asset('images/elvel-school.webp') }}" alt="Elvel School" class="w-full h-full object-cover">
                 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">

@@ -11,6 +11,7 @@
     
     <div class="w-[80%] mx-auto pt-16">
 
+      <!-- Acordeón Item 1 -->
       <div x-data="accordionPagination({{ $proyectos->where('categoria', 'Gasolineras')->values()->toJson() }})">
         <button 
             x-on:click="open = !open"
@@ -54,14 +55,19 @@
 
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -110,14 +116,19 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -166,14 +177,19 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -222,14 +238,19 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -278,14 +299,19 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -334,20 +360,25 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
 
       <!-- Acordeón Item 7 -->
-      <div x-data="accordionPagination({{ $proyectos->where('categoria', 'Educación')->values()->toJson() }})">
+      <div x-data="accordionPagination({{ $proyectos->where('categoria', 'Educacion')->values()->toJson() }})">
         <button 
             x-on:click="open = !open"
             class="w-full text-left p-4 bg-[#24317B] text-white rounded-[20px] focus:outline-none border-t-2 border-white flex">
@@ -390,14 +421,19 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -447,14 +483,80 @@
     
         <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
-                <div class="rounded-lg p-8 max-w-7xl w-full flex h-full max-h-[527px]">
-                    <img :src="modalImage" alt="" class="w-1/2 h-auto rounded-[50px]">
-                    <div class="text-white text-justify ml-8">
-                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left max-h-[677px] font-bold mb-4"></h4>
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
+            </div>            
+            <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
+        </div>
+      </div>
+
+      <!-- Acordeón Item 9 -->
+      <div x-data="accordionPagination({{ $proyectos->where('categoria', 'Otros')->values()->toJson() }})">
+        <button 
+            x-on:click="open = !open"
+            class="w-full text-left p-4 bg-[#24317B] text-white rounded-[20px] focus:outline-none border-t-2 border-white flex">
+            <div class="flex w-full items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.7083 14.2083H24.4383C24.3377 13.4967 24.1516 12.7997 23.8842 12.1326L28.4399 9.49246C28.5922 9.41052 28.7264 9.29885 28.8347 9.16407C28.943 9.02928 29.0232 8.87412 29.0704 8.70779C29.1176 8.54146 29.1309 8.36734 29.1096 8.19576C29.0883 8.02418 29.0328 7.85862 28.9463 7.7089C28.8598 7.55919 28.7441 7.42836 28.6061 7.32418C28.4681 7.22 28.3106 7.14458 28.1429 7.10239C27.9753 7.06021 27.8008 7.05212 27.63 7.07861C27.4591 7.1051 27.2953 7.16562 27.1482 7.25658L22.5887 9.90062C22.1528 9.35001 21.6548 8.85157 21.1045 8.41521L23.7473 3.85433C23.9064 3.55861 23.9441 3.21253 23.8524 2.88947C23.7607 2.56641 23.5468 2.29178 23.256 2.12379C22.9652 1.9558 22.6204 1.90767 22.2947 1.9896C21.9691 2.07153 21.6881 2.27708 21.5114 2.56267L18.8674 7.11579C18.2003 6.84806 17.5034 6.662 16.7917 6.56167V1.29167C16.7917 0.949095 16.6556 0.620555 16.4133 0.37832C16.1711 0.136086 15.8426 0 15.5 0C15.1574 0 14.8289 0.136086 14.5867 0.37832C14.3444 0.620555 14.2083 0.949095 14.2083 1.29167V6.56167C13.4966 6.662 12.7997 6.84806 12.1326 7.11579L9.49246 2.56008C9.31577 2.27449 9.03481 2.06894 8.70913 1.98701C8.38345 1.90508 8.03867 1.95322 7.74788 2.1212C7.45709 2.28919 7.24316 2.56383 7.15145 2.88689C7.05973 3.20995 7.09744 3.55603 7.25658 3.85175L9.89933 8.41521C9.34909 8.85157 8.85109 9.35001 8.41521 9.90062L3.85562 7.25658C3.70859 7.16562 3.54478 7.1051 3.37392 7.07861C3.20305 7.05212 3.02861 7.06021 2.86093 7.10239C2.69326 7.14458 2.53575 7.22 2.39776 7.32418C2.25977 7.42836 2.1441 7.55919 2.05761 7.7089C1.97112 7.85862 1.91557 8.02418 1.89425 8.19576C1.87293 8.36734 1.88627 8.54146 1.93349 8.70779C1.98072 8.87412 2.06085 9.02928 2.16915 9.16407C2.27745 9.29885 2.4117 9.41052 2.56396 9.49246L7.11579 12.1326C6.84835 12.7997 6.6623 13.4967 6.56167 14.2083H1.29167C0.949095 14.2083 0.620555 14.3444 0.37832 14.5867C0.136086 14.8289 0 15.1574 0 15.5C0 15.8426 0.136086 16.1711 0.37832 16.4133C0.620555 16.6556 0.949095 16.7917 1.29167 16.7917H6.56167C6.6623 17.5033 6.84835 18.2003 7.11579 18.8674L2.56008 21.5075C2.40783 21.5895 2.27357 21.7011 2.16527 21.8359C2.05697 21.9707 1.97684 22.1259 1.92962 22.2922C1.8824 22.4585 1.86905 22.6327 1.89037 22.8042C1.91169 22.9758 1.96724 23.1414 2.05374 23.2911C2.14023 23.4408 2.2559 23.5716 2.39389 23.6758C2.53188 23.78 2.68938 23.8554 2.85706 23.8976C3.02474 23.9398 3.19918 23.9479 3.37004 23.9214C3.5409 23.8949 3.70471 23.8344 3.85175 23.7434L8.41133 21.0994C8.84721 21.65 9.34522 22.1484 9.89546 22.5848L7.25658 27.1457C7.09744 27.4414 7.05973 27.7875 7.15145 28.1105C7.24316 28.4336 7.45709 28.7082 7.74788 28.8762C8.03867 29.0442 8.38345 29.0923 8.70913 29.0104C9.03481 28.9285 9.31577 28.7229 9.49246 28.4373L12.1326 23.8816C12.7997 24.1497 13.4966 24.3366 14.2083 24.4383V29.7083C14.2083 30.0509 14.3444 30.3794 14.5867 30.6217C14.8289 30.8639 15.1574 31 15.5 31C15.8426 31 16.1711 30.8639 16.4133 30.6217C16.6556 30.3794 16.7917 30.0509 16.7917 29.7083V24.4383C17.5033 24.3374 18.2002 24.1514 18.8674 23.8842L21.5075 28.4399C21.6842 28.7255 21.9652 28.9311 22.2909 29.013C22.6165 29.0949 22.9613 29.0468 23.2521 28.8788C23.5429 28.7108 23.7568 28.4362 23.8486 28.1131C23.9403 27.7901 23.9026 27.444 23.7434 27.1482L21.1007 22.5874C21.6509 22.151 22.1489 21.6526 22.5848 21.102L27.1444 23.746C27.2914 23.837 27.4552 23.8975 27.6261 23.924C27.7969 23.9505 27.9714 23.9424 28.1391 23.9002C28.3067 23.858 28.4642 23.7826 28.6022 23.6784C28.7402 23.5742 28.8559 23.4434 28.9424 23.2937C29.0289 23.144 29.0844 22.9784 29.1058 22.8068C29.1271 22.6352 29.1137 22.4611 29.0665 22.2948C29.0193 22.1285 28.9391 21.9733 28.8309 21.8385C28.7226 21.7037 28.5883 21.5921 28.436 21.5101L23.8803 18.87C24.1493 18.2022 24.3367 17.5044 24.4383 16.7917H29.7083C30.0509 16.7917 30.3794 16.6556 30.6217 16.4133C30.8639 16.1711 31 15.8426 31 15.5C31 15.1574 30.8639 14.8289 30.6217 14.5867C30.3794 14.3444 30.0509 14.2083 29.7083 14.2083ZM15.5 21.9583C6.96467 21.6871 6.96725 9.31162 15.5 9.04167C24.0353 9.31292 24.0327 21.6884 15.5 21.9583Z" fill="white"/>
+                    </svg>                                                                                                    
+                    <span class="font-bold text-[22px]">Otros</span>
+                </div>
+                <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg" :class="open ? 'rotate-[-90deg]' : ''" class="transition-transform duration-300">
+                    <path d="M2.78687 2.94531L13.984 13.0544L2.78687 23.1635" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>         
             </div>
+        </button>
+      
+        <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
+            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+                <template x-for="proyecto in paginatedItems" :key="proyecto.id">
+                    <div class="relative group flex flex-col items-center">
+                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    </div>
+                </template>
+            </div>
+        
+            <div class="flex justify-center mt-4 space-x-2 text-white">
+                <button @click="prevPage" :disabled="currentPage === 1" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50">Anterior</button>
+                <template x-for="page in totalPages" :key="page">
+                    <button @click="goToPage(page)"
+                            :class="{'bg-white text-black': currentPage === page, 'bg-gray-700': currentPage !== page}"
+                            class="px-3 py-1 rounded"
+                            x-text="page"></button>
+                </template>
+                <button @click="nextPage" :disabled="currentPage === totalPages" class="px-3 py-1 bg-gray-700 rounded disabled:opacity-50">Siguiente</button>
+            </div>
+        </div>
+        
+        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+            <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
+                <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
+                    <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
+                        <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </a>
+                    <div class="text-white text-justify md:ml-8 mt-6 md:mt-0 w-full md:w-1/2">
+                        <h4 x-text="modalTitle" class="text-[26px] max-w-[375px] text-left font-bold mb-4"></h4>
+                        <p x-html="modalContent"></p>
+                    </div>
+                </div>
+            </div>            
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -470,6 +572,7 @@
             modalImage: '',
             modalTitle: '',
             modalContent: '',
+            modalUrl: '',
             items: items,
             currentPage: 1,
             perPage: 8,
@@ -490,11 +593,12 @@
             goToPage(page) {
                 if (page >= 1 && page <= this.totalPages) this.currentPage = page;
             },
-            openModal(imgSrc, title, content) {
+            openModal(imgSrc, title, content, url) {
                 this.modalImage = imgSrc;
                 this.modalTitle = title;
                 this.modalContent = content;
                 this.modalOpen = true;
+                this.modalUrl = url;
             },
             closeModal() {
                 this.modalOpen = false;

@@ -29,6 +29,9 @@ Route::get('productos/{id}', [IndexController::class, 'show'])->name('productos.
 
 Route::get('proyectos', [IndexController::class, 'proyecto'])->name('sections.projects-list');
 
+Route::get('testimonios', [IndexController::class, 'testimonio'])->name('sections.testimonials');
+
+Route::get('BlogSolaris', [IndexController::class, 'blog'])->name('sections.blogs');
 
 Route::get('noticias', [IndexController::class, 'blog'])->name('noticias');
 

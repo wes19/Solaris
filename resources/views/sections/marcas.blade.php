@@ -17,18 +17,23 @@
   </div>
   <div class="p-8 bg-white">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
-      <img src="images/sol.webp" alt="Sol" class="h-20">
-      <img src="images/morningstar.webp" alt="Morningstar" class="h-20">
-      <img src="images/phocos.webp" alt="Phocos" class="h-20">
-      <img src="images/chromagen.webp" alt="Chromagen" class="h-20">
-      <img src="images/trojan.webp" alt="Trojan" class="h-20">
-      <img src="images/sma.webp" alt="SMA" class="h-20">
-      <img src="images/janitz.webp" alt="Janitz" class="h-20">
-      <img src="images/jasolar.webp" alt="JA Solar" class="h-20">
-      <img src="images/Peimar.webp" alt="Peimar" class="h-20">
-      <img src="images/eyedro.webp" alt="Eyedro" class="h-20">
-      <img src="images/huawei.webp" alt="Huawei" class="h-20">
-      <img src="images/lorents.webp" alt="Lorentz" class="h-20">
+      <img src="images/logos/huawei.webp" alt="Huawei" class="h-20">
+      <img src="images/logos/solis.webp" alt="Sol" class="h-20">
+      <!--<img src="images/logos/morningstar.webp" alt="Morningstar" class="h-20">-->
+      <img src="images/logos/phocos.webp" alt="Phocos" class="h-20">
+      <img src="images/logos/chromagen.webp" alt="Chromagen" class="h-20">
+      <img src="images/logos/trojan.webp" alt="Trojan" class="h-20">
+      <!--<img src="images/logos/sma.webp" alt="SMA" class="h-20">-->
+      <img src="images/logos/janitza.webp" alt="Janitz" class="h-20">
+      <img src="images/logos/jasolar.webp" alt="JA Solar" class="h-20">
+      <!--<img src="images/logos/Peimar.webp" alt="Peimar" class="h-20">
+      <img src="images/logos/eyedro.webp" alt="Eyedro" class="h-20">
+      <img src="images/logos/lorents.webp" alt="Lorentz" class="h-20">-->
+      <img src="images/logos/trinasolar.webp" alt="TrinaSolar" class="h-20">
+      <img src="images/logos/mastersolar.webp" alt="MasterSolar" class="h-20">
+      <img src="images/logos/pytes.webp" alt="Pytes" class="h-20">
+      <img src="images/logos/taienergy.webp" alt="TaiEnergy" class="h-20">
+      <img src="images/logos/ritar.webp" alt="Ritar" class="h-20">
     </div>
   </div>
   

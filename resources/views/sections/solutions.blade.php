@@ -1,6 +1,6 @@
 
 <div class="flex min-h-screen w-full bg-[#FFFFFF]" id="soluciones">
-    <div class="w-[30%] flex flex-col items-center justify-start p-6">
+    <div class="w-[30%] flex flex-col items-center justify-center p-6">
         <h2 id="productos-soluciones-2" class="hidden text-[24px] text-[#24317B] font-bold text-center mb-4 uppercase">
             Productos y Soluciones
         </h2>
@@ -49,14 +49,9 @@
     @php
     $modales = [
         [
-            'titulo' => 'Soluciones de Eficiencia Energética',
-            'descripcion' => 'Optimizamos el consumo eléctrico de tu hogar o negocio mediante la implementación de tecnologías avanzadas que reducen el desperdicio energético y maximizan el ahorro. Ofrecemos auditorías energéticas, modernización de sistemas de iluminación, instalación de dispositivos de control inteligente y asesoría en la reducción de costos operativos.',
-            'imagen' => 'soluciones-eficiencia.webp'
-        ],
-        [
-            'titulo' => 'Climatización Solar de Piscinas',
-            'descripcion' => 'Implementamos sistemas de climatización solar para piscinas mediante colectores solares de alto rendimiento. Estos dispositivos captan la radiación solar y la transfieren al agua, elevando su temperatura de manera eficiente y sostenible. Nuestros colectores están diseñados con materiales resistentes a la corrosión y garantizan una climatización constante sin consumo eléctrico adicional. Este sistema es ideal para piscinas residenciales, hoteles y clubes deportivos, reduciendo significativamente los costos operativos y la huella de carbono.',
-            'imagen' => 'climatizacion-solar.webp'
+            'titulo' => 'Instalación de Sistemas de Autoconsumo',
+            'descripcion' => 'Aprovecha la energía del sol para reducir tu dependencia de la red eléctrica con un sistema de autoconsumo solar. Diseñamos soluciones personalizadas que permiten generar y utilizar tu propia electricidad en tiempo real, optimizando la producción fotovoltaica para maximizar el ahorro en el consumo energético. Con nuestros sistemas, puedes asegurar un suministro estable de energía durante el día y reducir considerablemente tu factura eléctrica.',
+            'imagen' => 'sistemas-autoconsumo.webp'
         ],
         [
             'titulo' => 'Instalación de Sistemas de Respaldo',
@@ -69,24 +64,38 @@
             'imagen' => 'sistemas-aislados.webp'
         ],
         [
-            'titulo' => 'Instalación de Sistemas Térmicos',
-            'descripcion' => 'Aprovechamos la energía solar para generar agua caliente de manera eficiente mediante Sistema de Termosifón. Estos sistemas son ideales para hogares, hoteles, hospitales e industrias, reduciendo la dependencia de combustibles fósiles y disminuyendo los costos energéticos.',
-            'imagen' => 'sistemas-termicos.webp'
+            'titulo' => 'Sistemas Híbridos',
+            'descripcion' => 'Nuestros sistemas híbridos combinan un sistema de autoconsumo con almacenamiento en baterías para garantizar energía de respaldo en caso de cortes eléctricos. Estos sistemas permiten aprovechar al máximo la generación solar durante el día y almacenar el excedente en baterías para su uso en la noche o en situaciones de emergencia. Ideales para hogares, negocios e industrias que buscan reducir costos y asegurar un suministro energético ininterrumpido.',
+            'imagen' => 'sistemas-hibridos.webp'
         ],
         [
-            'titulo' => 'Instalación de Sistemas de Bombeo',
+            'titulo' => 'Instalación de Sistemas de Bombeo Solar',
             'descripcion' => 'Implementamos sistemas de bombeo solar para el abastecimiento de agua en zonas rurales, agrícolas e industriales. Estos sistemas eliminan la necesidad de combustibles fósiles o electricidad convencional, asegurando un suministro eficiente, sostenible y de bajo mantenimiento.',
             'imagen' => 'sistemas-bombeo.webp'
         ],
         [
-            'titulo' => 'Instalación de Sistemas de Autoconsumo',
-            'descripcion' => 'Aprovecha la energía del sol para reducir tu dependencia de la red eléctrica con un sistema de autoconsumo solar. Diseñamos soluciones personalizadas que permiten generar y utilizar tu propia electricidad en tiempo real, optimizando la producción fotovoltaica para maximizar el ahorro en el consumo energético. Con nuestros sistemas, puedes asegurar un suministro estable de energía durante el día y reducir considerablemente tu factura eléctrica.',
-            'imagen' => 'sistemas-autoconsumo.webp'
+            'titulo' => 'Sistema de Refrigeración Solar',
+            'descripcion' => 'Nuestros sistemas de refrigeración solar están diseñados para brindar soluciones eficientes y sostenibles en zonas con acceso limitado a energía eléctrica o con altas necesidades de ahorro energético. Utilizan la energía solar para alimentar refrigeradoras, congeladores u otros equipos de conservación, lo que los convierte en una opción ideal para hogares rurales, clínicas, negocios y proyectos agrícolas.
+
+            Gracias a su tecnología de bajo consumo y su compatibilidad con paneles solares, estos sistemas permiten mantener alimentos y productos perecederos en condiciones óptimas, sin depender de la red eléctrica tradicional. Además, contribuyen significativamente a la reducción de costos operativos y al cuidado del medio ambiente.
+
+            Ya sea para uso doméstico o comercial, la refrigeración solar representa una alternativa confiable, duradera y alineada con un futuro más limpio y sustentable. Consulta con nosotros para conocer el sistema ideal para tu necesidad.',
+            'imagen' => 'sistemas-refrigeracion.webp'
         ],
         [
-            'titulo' => 'Sistemas Híbridos',
-            'descripcion' => 'Nuestros sistemas híbridos combinan un sistema de autoconsumo con almacenamiento en baterías para garantizar energía de respaldo en caso de cortes eléctricos. Estos sistemas permiten aprovechar al máximo la generación solar durante el día y almacenar el excedente en baterías para su uso en la noche o en situaciones de emergencia. Ideales para hogares, negocios e industrias que buscan reducir costos y asegurar un suministro energético ininterrumpido.',
-            'imagen' => 'sistemas-hibridos.webp'
+            'titulo' => 'Instalación de Sistemas Termosolar',
+            'descripcion' => 'Aprovechamos la energía solar para generar agua caliente de manera eficiente mediante Sistema de Termosifón. Estos sistemas son ideales para hogares, hoteles, hospitales e industrias, reduciendo la dependencia de combustibles fósiles y disminuyendo los costos energéticos.',
+            'imagen' => 'sistemas-termicos.webp'
+        ],
+        [
+            'titulo' => 'Climatización Solar de Piscinas',
+            'descripcion' => 'Implementamos sistemas de climatización solar para piscinas mediante colectores solares de alto rendimiento. Estos dispositivos captan la radiación solar y la transfieren al agua, elevando su temperatura de manera eficiente y sostenible. Nuestros colectores están diseñados con materiales resistentes a la corrosión y garantizan una climatización constante sin consumo eléctrico adicional. Este sistema es ideal para piscinas residenciales, hoteles y clubes deportivos, reduciendo significativamente los costos operativos y la huella de carbono.',
+            'imagen' => 'climatizacion-solar.webp'
+        ],
+        [
+            'titulo' => 'Soluciones de Eficiencia Energética',
+            'descripcion' => 'Optimizamos el consumo eléctrico de tu hogar o negocio mediante la implementación de tecnologías avanzadas que reducen el desperdicio energético y maximizan el ahorro. Ofrecemos auditorías energéticas, modernización de sistemas de iluminación, instalación de dispositivos de control inteligente y asesoría en la reducción de costos operativos.',
+            'imagen' => 'soluciones-eficiencia.webp'
         ],
         [
             'titulo' => 'Mantenimiento Preventivo',
@@ -99,20 +108,17 @@
             'imagen' => 'mantenimiento-correctivo.webp'
         ],
         [
-            'titulo' => 'Sistema de Refrigeración Solar',
-            'descripcion' => 'Nuestros sistemas de refrigeración solar están diseñados para brindar soluciones eficientes y sostenibles en zonas con acceso limitado a energía eléctrica o con altas necesidades de ahorro energético. Utilizan la energía solar para alimentar refrigeradoras, congeladores u otros equipos de conservación, lo que los convierte en una opción ideal para hogares rurales, clínicas, negocios y proyectos agrícolas.
+            'titulo' => 'Respuestos',
+            'descripcion' => 'Proximamente...',
+            'imagen' => ''
+        ],
 
-            Gracias a su tecnología de bajo consumo y su compatibilidad con paneles solares, estos sistemas permiten mantener alimentos y productos perecederos en condiciones óptimas, sin depender de la red eléctrica tradicional. Además, contribuyen significativamente a la reducción de costos operativos y al cuidado del medio ambiente.
-
-            Ya sea para uso doméstico o comercial, la refrigeración solar representa una alternativa confiable, duradera y alineada con un futuro más limpio y sustentable. Consulta con nosotros para conocer el sistema ideal para tu necesidad.',
-            'imagen' => 'sistemas-refrigeracion.webp'
-        ]
     ];
     @endphp
 
     @foreach($modales as $index => $modal)
         <div id="modal-{{ $index }}" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-end">
-            <div class="bg-white p-8 rounded-lg w-[60%] max-w-[800px] relative mr-32 flex flex-col gap-6">
+            <div class="bg-white p-8 rounded-lg w-[60%] max-w-[800px] relative mr-48 flex flex-col gap-6">
                 <button class="absolute top-2 right-4 text-gray-700 text-2xl font-bold" onclick="closeModal({{ $index }})">&times;</button>
 
                 <div class="w-full text-center">

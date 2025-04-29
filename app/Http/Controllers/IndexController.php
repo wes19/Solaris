@@ -6,6 +6,7 @@ use App\Models\BlogSolari;
 use App\Models\Producto;
 use App\Models\Promocione;
 use App\Models\Proyecto;
+use App\Models\Testimonio;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -13,8 +14,8 @@ class IndexController extends Controller
     // Método para mostrar el blog
     public function blog(): \Illuminate\View\View
     {
-        $blog = BlogSolari::orderBy('created_at', 'desc')->paginate(8);
-        return view('noticias', compact('blog'));
+        $blogs = BlogSolari::all();
+        return view('sections.blogs', compact('blogs'));
     }
 
     // Método para mostrar los productos
@@ -40,6 +41,13 @@ class IndexController extends Controller
         return view('sections.projects-list', compact('proyectos'));
     }
 
+    // Método para mostrar los testimonios
+    public function testimonio(): \Illuminate\View\View
+    {
+        $testimonios = Testimonio::all();
+        return view('sections.testimonials', compact('testimonios'));
+    }
+
     // Método para mostrar un producto específico
     public function show($id): \Illuminate\View\View
     {
@@ -52,6 +60,9 @@ class IndexController extends Controller
     {
         $news = BlogSolari::orderBy('created_at', 'desc')->take(3)->get();
         $proyectos = Proyecto::orderBy('created_at', 'desc')->get();
-        return view('welcome', compact('news', 'proyectos'));
+        $testimonios = Testimonio::all(); 
+        $blogs = BlogSolari::all();
+        return view('welcome', compact('news', 'proyectos', 'testimonios', 'blogs'));
     }
+
 }
