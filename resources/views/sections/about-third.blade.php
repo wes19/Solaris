@@ -1,20 +1,24 @@
-<div class="h-[100vh] bg-[#000F33] flex xl:flex-row flex-col px-12 gap-8" id="sobre-nosotros">
-    <div class="flex h-full w-full flex-col xl:pt-12 xl:items-start">
-        <h2 class="text-white text-[144px] font-semibold tracking-normal leading-[109px]">Sobre Nosotros</h2>
+<div class="min-h-screen bg-[#000F33] flex flex-col xl:flex-row px-4 md:px-8 xl:px-12 gap-8 py-10" id="sobre-nosotros">
+    <div class="flex w-full flex-col xl:pt-12 xl:items-start items-center">
+      <h2 class="text-white text-[48px] sm:text-[72px] md:text-[96px] xl:text-[144px] font-semibold leading-none text-center xl:text-left">
+        Sobre Nosotros
+      </h2>
     </div>
-    <div class="flex mb-10 w-full flex-col pt-12 text-white">
-        <p class="xl:w-[650px] xl:text-5xl lg:w-full lg:text-3xl text-2xl text-center md:text-left font-semibold xl:h-[87px] capitalize">
-            compromiso con la Calidad e Innovación
-        </p>
-        <p class="xl:min-w-[244px] md:w-[95%] w-full font-medium tracking-tighter text-[20px] md:text-justify mt-20 text-left">
-            Solaris se destaca por su compromiso constante con la calidad y la innovación. A través de la capacitación
-            continua, certificaciones de nuestro personal y la implementación de tecnologías avanzadas, Solaris asegura
-            que sus productos y servicios estén a la vanguardia de la industria de energías renovables.
-            <br><br>
-            La alianza de Solaris con expertos internacionales, como los proveedores de nuestros equipos, nos ha
-            permitido incorporar los mejores estándares de calidad y soporte técnico. A través de estos esfuerzos,
-            Solaris ha obtenido una reputación de excelencia en la calidad de instalación, mantenimiento y gestión de
-            sistemas solares en todo el país.
-        </p>
+  
+    <div class="flex w-full flex-col pt-6 xl:pt-12 text-white items-center xl:items-start">
+      <p class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-center xl:text-left font-semibold capitalize max-w-[650px]">
+        compromiso con la Calidad e Innovación
+      </p>
+      <p class="w-full md:w-[95%] xl:max-w-[800px] font-medium tracking-tight text-[16px] sm:text-[18px] md:text-[20px] mt-10 text-justify px-2 md:px-0">
+        Solaris se destaca por su compromiso constante con la calidad y la innovación. A través de la capacitación
+        continua, certificaciones de nuestro personal y la implementación de tecnologías avanzadas, Solaris asegura
+        que sus productos y servicios estén a la vanguardia de la industria de energías renovables.
+        <br><br>
+        La alianza de Solaris con expertos internacionales, como los proveedores de nuestros equipos, nos ha
+        permitido incorporar los mejores estándares de calidad y soporte técnico. A través de estos esfuerzos,
+        Solaris ha obtenido una reputación de excelencia en la calidad de instalación, mantenimiento y gestión de
+        sistemas solares en todo el país.
+      </p>
     </div>
-</div>
+  </div>
+  

@@ -1,11 +1,19 @@
 
+<style>
+    .swiper2-next,
+    .swiper2-prev {
+      color: #FFF !important;
+    }
+
+</style>
+
 <div class="h-[200vh] flex flex-col justify-center mt-[300px]">
     <div class=" flex flex-col">
         <div class="flex flex-col">
             <div class="w-full h-full flex justify-center flex-col xl:pl-[212px] lg:items-center xl:items-start">
-                <h3 class="w-full max-w-[433px] h-full max-h-[119px] leading-[111%] text-[66px] text-[#000f33] mb-[35px] font-semibold">
+                <h3 class="w-full max-w-[433px] text-4xl sm:text-5xl lg:text-6xl text-[#000f33] mb-[35px] font-semibold leading-[111%]">
                     Testimonios de Clientes
-                </h3>
+                </h3>                
             </div>
             
             <div class="w-full h-full flex justify-center flex-col xl:pl-[212px] mb-[100px] lg:items-center xl:items-start">
@@ -25,11 +33,11 @@
   
         <div class="relative w-full h-full flex justify-center flex-col">
             <div class="relative z-10 w-full h-full flex justify-center items-center overflow-hidden">
-                <div class="swiper-container-second w-full">
+                <div class="swiper-container-second mySwiper2 w-full">
                     <div class="swiper-wrapper">
                         @foreach($testimonios->reverse() as $testimonio)
                             <div class="swiper-slide flex justify-center items-center">
-                                <div class="relative w-[320px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
+                                <div class="relative w-full m-5 max-w-[320px] sm:max-w-[380px] md:max-w-[420px] min-h-[621px] flex flex-col justify-between items-center overflow-hidden rounded-[100px]">
                                     <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
                                         class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
                                     <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
@@ -45,7 +53,9 @@
                                             {{ $testimonio->nombre }}
                                         </p>
                                         <p class="w-full max-w-[235px] text-xl font-normal leading-[111%]">
-                                            {!! $testimonio->descripcion !!}
+                                            <div class="p-6 text-[18px]">
+                                                {!! $testimonio->descripcion !!}
+                                            </div>
                                         </p>
                                     </div>
                                 </div>
@@ -53,8 +63,8 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="swiper-button-prev bg-gray-600/70 p-7 rounded-full text-white"></div>
-                <div class="swiper-button-next bg-gray-600/70 p-7 rounded-full text-white"></div>    
+                <div class="swiper-button-prev mySwiper2-prev bg-gray-600/70 p-7 rounded-full text-white"></div>
+                <div class="swiper-button-next mySwiper2-next bg-gray-600/70 p-7 rounded-full text-white"></div>    
             </div>
         </div>
 
@@ -63,17 +73,34 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-        new Swiper('.swiper-container-second', {
-            slidesPerView: 4,
+        new Swiper('.mySwiper2', {
             loop: false,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+              nextEl: '.mySwiper2-next',
+              prevEl: '.mySwiper2-prev',
             },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: false,
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
         });
     });
-</script>
+  </script>

@@ -1,5 +1,30 @@
 
-<div class="w-full h-[250vh] flex bg-[#F2F5FA]" id="blog">
+<style>
+  .swiper1-next,
+  .swiper1-prev {
+    color: #000;
+    top: unset !important;
+    bottom: 0px !important;
+    transform: translateY(0) !important;
+    z-index: 10;
+  }
+
+  .swiper1-next {
+    right: 10px;
+  }
+  
+  .swiper1-prev {
+    left: 10px;
+  }
+
+  .swiper {
+    position: relative;
+    padding-bottom: 50px; 
+  }
+</style>
+
+
+<div class="w-full h-[250vh] flex bg-[#F2F5FA] pb-[500px]" id="blog">
     <div class="w-1/3 flex flex-col p-8 gap-5">
       <div class="p-4" style="height: 20%;">
         <h1 class="text-[96px] leading-[100%] font-semibold" style="color: #24317B;">
@@ -21,7 +46,7 @@
       <div class="p-4 border-r border-gray-300" style="height: 80%;">
         <div class="w-full max-w-full overflow-hidden">
           <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1079805887516726&show_text=true&width=500"
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1079805887516726&show_text=true&width=100%"
             width="100%" 
             height="679" 
             style="border:none;overflow:hidden;max-width:100%;" 
@@ -34,13 +59,13 @@
       
         <div class="w-full max-w-full overflow-hidden">
           <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1078941897603125&show_text=true&width=500"
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1078844030946245&show_text=true&width=500" 
             width="100%" 
-            height="679" 
-            style="border:none;overflow:hidden;max-width:100%;" 
+            height="660" 
+            style="border:none;overflow:hidden" 
             scrolling="no" 
             frameborder="0" 
-            allowfullscreen="true"
+            allowfullscreen="true" 
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
           </iframe>
         </div>
@@ -48,256 +73,57 @@
       
     </div>
   
-    <div class="w-2/3 flex flex-col gap-5">
+    <div class="w-2/3 mx-auto mt-10">
       <div class="h-[20%]"></div>
-
-      <div x-data="{ open: false }">
-        <div @click="open = true" class="flex flex-col gap-4 w-full max-w-3xl mx-auto cursor-pointer transition-shadow">
-          <div class="w-full h-96 flex items-center justify-center overflow-hidden">
-            <img src="images/alianza-grupo-midence-soto.webp" alt="Alianza Grupo Midence Soto" class="max-h-full max-w-full object-contain"/>
-          </div>
-          <h3 class="text-xl font-semibold text-black">
-            Alianza con el Grupo Midence Soto Pierrefeu
-          </h3>
-          <div class="overflow-auto max-h-48 pr-2">
-            <p class="text-black">
-              Estas instalaciones no solo proporcionarán energía limpia a edificios comerciales y corporativos, 
-              sino que también aliviarán la presión en el sistema eléctrico nacional. Con esta inversión, contribuimos
-               a la reducción de emisiones de CO2 y reafirmamos nuestro compromiso con la sostenibilidad ambiental. 
-               El proyecto consiste en 5 granjas solares de última tecnología, generando 521,303 KWh anuales y marcando 
-               un hito significativo en el compromiso de nuestro cliente Grupo MSP con la responsabilidad ambiental.
-            </p>
-          </div>
-        </div>
-      
-        <!-- MODAL -->
-        <div x-show="open" x-cloak @click.self="open = false" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" x-transition>
-          <div class="bg-white p-6 rounded-lg w-[90%] max-w-5xl max-h-[95vh] overflow-y-auto relative">
-            <button @click="open = false" class="absolute top-2 right-2 text-black text-2xl hover:text-gray-700">
-              ✕
-            </button>
-            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-center text-black">
-              Alianza con el Grupo Midence Soto Pierrefeu
-            </h2>
-            <p class="text-black text-base md:text-lg leading-relaxed mb-4">
-              Estas instalaciones no solo proporcionarán energía limpia a edificios comerciales y corporativos, sino que 
-              también aliviarán la presión en el sistema eléctrico nacional. Con esta inversión, contribuimos a la reducción 
-              de emisiones de CO2 y reafirmamos nuestro compromiso con la sostenibilidad ambiental. El proyecto consiste en 
-              5 granjas solares de última tecnología, generando 521,303 KWh anuales y marcando un hito significativo en el 
-              compromiso de nuestro cliente Grupo MSP con la responsabilidad ambiental.
-            </p>
-            <div class="w-full h-[300px] md:h-[400px] flex items-center justify-center overflow-hidden rounded-md">
-              <img src="images/midence-soto-modal.webp" alt="Alianza Grupo Midence Soto" class="max-h-full max-w-full object-contain" />
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          @foreach ($blogs->chunk(4) as $blogGroup)
+            <div class="swiper-slide">
+              <div class="grid grid-cols-2 gap-6 p-4">
+                @foreach ($blogGroup as $blog)
+                  <div class="p-4 flex flex-col gap-4 rounded-md">
+                    <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md mb-2">
+                      <img src="{{ Voyager::image($blog->imagen) }}" alt="{{ $blog->titulo }}" class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <h3 class="text-xl text-center font-semibold text-black">
+                      {{ $blog->titulo }}
+                    </h3>
+                    <div class="text-black overflow-auto max-h-48 pr-2">
+                      {!! $blog->descripcion !!}
+                    </div>
+                  </div>
+                @endforeach
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-  
-      <div x-data="{ openModal1: false, openModal2: false }">
-        <div class="flex gap-5 w-full p-10">
-        
-          <div @click="openModal1 = true" class="cursor-pointer p-4 flex flex-col gap-2 w-1/2">
-            <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md mb-2">
-              <img src="images/30-proyectos-renovables.webp" alt="30 años renovables" class="max-h-full max-w-full object-contain"/>
-            </div>
-            <h3 class="text-xl text-center font-semibold text-black mt-2">
-              30 años de proyectos renovables
-            </h3>
-            <div class="overflow-auto max-h-48 pr-2">
-              <p class="text-black">
-                Solaris y la Fundación Covelo firmaron un importante convenio el día de ayer 23 de febrero, buscando establecer lazos 
-                de cooperación técnica financiera, siendo el principal objetivo obtener financiamiento con condiciones blandas de 
-                proyectos de energía renovable y eficiencia energética para el segmento pyme y residencial.<br>
-                En el acto estuvo presente el presidente ejecutivo de Fundación Covelo, Juan José Lagos y el gerente general de Solaris, el Ingeniero Iván Pastor.
-              </p>
-            </div>
-          </div>
-
-          <div @click="openModal2 = true" class="cursor-pointer p-8 flex flex-col gap-4 w-1/2">
-            <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md">
-              <img src="images/alianza-financiera-micredito.webp" alt="Financiera MiCrédito" class="max-h-full max-w-full object-contain"/>
-            </div>
-            <h3 class="text-xl text-center font-semibold text-black">
-              La alianza que estabas esperando está aquí.
-            </h3>
-            <div class="overflow-auto max-h-48 pr-2">
-              Nos hemos unido con Financiera MiCrédito Honduras para ofrecer financiamientos accesibles a personas y Mipymes que buscan invertir en sistemas solares.
-            </div>
-          </div>
+          @endforeach
         </div>
 
-        <div 
-          x-show="openModal1" 
-          x-cloak
-          @click.self="openModal1 = false"
-          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" 
-          x-transition>
-          <div class="bg-white p-6 rounded-lg w-[90%] max-w-5xl max-h-[90vh] overflow-y-auto relative">
-            <button @click="openModal1 = false" class="absolute top-2 right-2 text-black text-2xl hover:text-gray-700">✕</button>
-            <h2 class="text-2xl font-bold mb-4 text-center text-black">30 años de proyectos renovables</h2>
-            <p class="text-black">
-              Solaris y la Fundación Covelo firmaron un importante convenio el día de ayer 23 de febrero, buscando establecer lazos 
-              de cooperación técnica financiera, siendo el principal objetivo obtener financiamiento con condiciones blandas de 
-              proyectos de energía renovable y eficiencia energética para el segmento pyme y residencial.<br>
-              En el acto estuvo presente el presidente ejecutivo de Fundación Covelo, Juan José Lagos y el gerente general de Solaris, el Ingeniero Iván Pastor.
-            </p>
-            <div class="w-full h-[400px] flex items-center justify-center overflow-hidden rounded-md">
-              <img src="images/30-proyectos-renovables.webp" alt="30 años renovables" class="max-h-full max-w-full object-contain" />
-            </div>
-          </div>
-        </div>
-
-        <div 
-          x-show="openModal2" 
-          x-cloak
-          @click.self="openModal2 = false"
-          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" 
-          x-transition>
-          <div class="bg-white p-6 rounded-lg w-[90%] max-w-5xl max-h-[90vh] overflow-y-auto relative">
-            <button @click="openModal2 = false" class="absolute top-2 right-2 text-black text-2xl hover:text-gray-700">✕</button>
-            <h2 class="text-2xl font-bold mb-4 text-center text-black">La alianza que estabas esperando</h2>
-              Nos hemos unido con Financiera MiCrédito Honduras para ofrecer financiamientos accesibles a personas y Mipymes que buscan invertir en sistemas solares.
-            <div class="w-full h-[400px] flex items-center justify-center overflow-hidden rounded-md">
-              <img src="images/alianza-financiera-micredito.webp" alt="Financiera MiCrédito" class="max-h-full max-w-full object-contain" />
-            </div>
-          </div>
-        </div>
-      
+        <div class="swiper-button-next swiper1-next bg-gray-600/70 p-7 rounded-full"></div>
+        <div class="swiper-button-prev swiper1-prev bg-gray-600/70 p-7 rounded-full"></div>
+        <div class="swiper-pagination"></div>
       </div>
 
-    </div>
-  </div>
-  
-
-
-
-  <div class="w-2/3 flex flex-col gap-5">
-    <div class="h-[20%]"></div>
-    <!-- Primer bloque de contenido -->
-    <div class="flex gap-5 w-full p-10">
-      <div class="p-4 flex flex-col gap-2 w-1/2">
-        <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md mb-2">
-          <img src="images/30-proyectos-renovables.webp" alt="30 años renovables" class="max-h-full max-w-full object-contain"/>
-        </div>
-        <h3 class="text-xl text-center font-semibold text-black mt-2">
-          30 años de proyectos renovables
-        </h3>
-        <div class="overflow-auto max-h-48 pr-2">
-          <p class="text-black">
-            Solaris y la Fundación Covelo firmaron un importante convenio el día de ayer 23 de febrero, buscando establecer lazos 
-            de cooperación técnica financiera, siendo el principal objetivo obtener financiamiento con condiciones blandas de 
-            proyectos de energía renovable y eficiencia energética para el segmento pyme y residencial.<br>
-            En el acto estuvo presente el presidente ejecutivo de Fundación Covelo, Juan José Lagos y el gerente general de Solaris, el Ingeniero Iván Pastor.
-          </p>
-        </div>
-      </div>
-  
-      <div class="p-8 flex flex-col gap-4 w-1/2">
-        <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md">
-          <img src="images/alianza-financiera-micredito.webp" alt="Financiera MiCrédito" class="max-h-full max-w-full object-contain"/>
-        </div>
-        <h3 class="text-xl text-center font-semibold text-black">
-          La alianza que estabas esperando está aquí.
-        </h3>
-        <div class="overflow-auto max-h-48 pr-2">
-          Nos hemos unido con Financiera MiCrédito Honduras para ofrecer financiamientos accesibles a personas y Mipymes que buscan invertir en sistemas solares.
-        </div>
-      </div>
-    </div>
-  
-    <!-- Segundo bloque de contenido (idéntico) -->
-    <div class="flex gap-5 w-full p-10">
-      <div class="p-4 flex flex-col gap-2 w-1/2">
-        <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md mb-2">
-          <img src="images/30-proyectos-renovables.webp" alt="30 años renovables" class="max-h-full max-w-full object-contain"/>
-        </div>
-        <h3 class="text-xl text-center font-semibold text-black mt-2">
-          30 años de proyectos renovables
-        </h3>
-        <div class="overflow-auto max-h-48 pr-2">
-          <p class="text-black">
-            Solaris y la Fundación Covelo firmaron un importante convenio el día de ayer 23 de febrero, buscando establecer lazos 
-            de cooperación técnica financiera, siendo el principal objetivo obtener financiamiento con condiciones blandas de 
-            proyectos de energía renovable y eficiencia energética para el segmento pyme y residencial.<br>
-            En el acto estuvo presente el presidente ejecutivo de Fundación Covelo, Juan José Lagos y el gerente general de Solaris, el Ingeniero Iván Pastor.
-          </p>
-        </div>
-      </div>
-  
-      <div class="p-8 flex flex-col gap-4 w-1/2">
-        <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md">
-          <img src="images/alianza-financiera-micredito.webp" alt="Financiera MiCrédito" class="max-h-full max-w-full object-contain"/>
-        </div>
-        <h3 class="text-xl text-center font-semibold text-black">
-          La alianza que estabas esperando está aquí.
-        </h3>
-        <div class="overflow-auto max-h-48 pr-2">
-          Nos hemos unido con Financiera MiCrédito Honduras para ofrecer financiamientos accesibles a personas y Mipymes que buscan invertir en sistemas solares.
-        </div>
-      </div>
-    </div>
+    </div>    
   </div>
 
-
-
-
-
-
-
-
-  <div class="w-2/3 flex flex-col gap-5">
-    <div class="h-[20%]"></div>
+  <script>
+    const swiper = new Swiper('.mySwiper1', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper1-next',
+        prevEl: '.swiper1-prev',
+      },
+      breakpoints: {
+        1024: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        640: { slidesPerView: 1 },
+      }
+    });
+  </script>
   
-    @foreach($blogs->chunk(2) as $blogPair)
-      <div class="flex gap-5 w-full p-10">
-        @foreach($blogPair as $blog)
-          <div class="p-4 flex flex-col gap-2 w-1/2">
-            <div class="w-full h-96 flex items-center justify-center overflow-hidden rounded-md mb-2">
-              <img src="{{ asset('images/' . $blog->imagen) }}" alt="{{ $blog->titulo }}" class="max-h-full max-w-full object-contain"/>
-            </div>
-            <h3 class="text-xl text-center font-semibold text-black mt-2">
-              {{ $blog->titulo }}
-            </h3>
-            <div class="overflow-auto max-h-48 pr-2 text-black">
-              {!! nl2br(e($blog->descripcion)) !!}
-            </div>
-          </div>
-        @endforeach
-      </div>
-    @endforeach
-  </div>
-  
-
-
-  <div class="flex flex-col">
-    <div class="w-full h-full flex justify-center flex-col xl:pl-[212px] lg:items-center xl:items-start">
-        <h3 class="w-full max-w-[433px] h-full max-h-[119px] leading-[111%] text-[66px] text-[#000f33] mb-[35px] font-semibold">
-            Testimonios de Clientes
-        </h3>
-    </div>
-    <div class="w-full flex justify-center xl:pl-[212px] mb-[100px] px-4 lg:px-8">
-        <div class="bg-white border border-gray-300 rounded-[16px] p-6 max-w-[1020px]">
-            <p class="text-justify text-xl leading-[111%] font-medium text-[#000f33]">
-                La satisfacción de nuestros clientes es nuestro mejor testimonio. Muchos de nuestros clientes destacan
-                el profesionalismo y compromiso de nuestro equipo, así como la calidad y durabilidad de nuestras
-                instalaciones. Entre los comentarios recibidos, un cliente expresó: “Gracias a Solaris, hemos reducido
-                nuestra factura de electricidad a la mitad y ahora contamos con energía confiable. El equipo de Solaris
-                nos acompañó en todo momento, asegurándose de que el sistema funcionara a la perfección.”
-                Estos testimonios reflejan nuestra dedicación a ofrecer soluciones de alta calidad y a construir
-                relaciones de confianza a largo plazo con cada uno de nuestros clientes.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<div class=" w-full h-full flex justify-center flex-col xl:pl-[212px] mb-[100px] lg:items-center xl:items-start bg-[#FFFFFF]">
-  <p class="w-full h-full max-w-[1020px] max-h-[280px] xl:text-xl lg:text-lg xl:px-0 lg:px-8 text-justify leading-[111%] font-medium text-[#000f33]">
-      La satisfacción de nuestros clientes es nuestro mejor testimonio. Muchos de nuestros clientes destacan
-      el profesionalismo y compromiso de nuestro equipo, así como la calidad y durabilidad de nuestras
-      instalaciones. Entre los comentarios recibidos, un cliente expresó: “Gracias a Solaris, hemos reducido
-      nuestra factura de electricidad a la mitad y ahora contamos con energía confiable. El equipo de Solaris
-      nos acompañó en todo momento, asegurándose de que el sistema funcionara a la perfección.”
-      Estos testimonios reflejan nuestra dedicación a ofrecer soluciones de alta calidad y a construir
-      relaciones de confianza a largo plazo con cada uno de nuestros clientes.</p>
-</div>

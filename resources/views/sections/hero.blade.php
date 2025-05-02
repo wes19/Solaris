@@ -2,25 +2,31 @@
     <div class="relative">
         <!-- Contenido principal -->
         <div class="container mx-auto p-4 md:mt-11 mt-20 relative z-10">
-            <h1 class="text-center text-[#FBED4F] 2xl:text-[250px] xl:text-[200px] lg:text-[160px] md:text-[120px] text-[60px] font-medium tracking-[0.15em]">SOLARIS</h1>
+            <h1 class="text-center text-[#FBED4F] 2xl:text-[250px] xl:text-[200px] lg:text-[160px] md:text-[120px] text-[60px] font-medium tracking-[0.15em]">
+                SOLARIS
+            </h1>
         </div>
     </div>
 </div>
-<div class="w-full flex md:flex-row flex-col h-full mt-[226px] mb-[20%]" id="about-section">
-    <div class="w-full flex flex-col z-[111] md:ml-[5%]">
-        <h2 class="md:w-80 w-full md:pl-[5%]  text-8xl text-[#24317B] font-medium md:text-left text-center">Nuestra<br>Historia</h2>
-        <div class="md:pl-[5%] w-[503px] h-[618px] rounded-[20px]" style="background-color:rgba(255, 255, 255, 0.85)">
-            <p class="text-[#24317B] md:text-left text-justify px-10 md:px-0 mt-5 font-semibold md:max-w-[433px] tracking-tighter leading-[23.5px] lg:text-2xl text-base">
+
+<div class="w-full flex flex-col md:flex-row h-full mt-[226px] mb-[20%]" id="about-section">
+    <div class="w-full flex flex-col z-[111] md:ml-[5%] mb-14 md:mb-0">
+        <h2 class="md:w-80 w-full md:pl-[5%] text-7xl md:text-10xl text-[#24317B] font-medium md:text-left text-center">
+            Nuestra<br>Historia
+        </h2>
+        <div class="md:pl-[5%] w-full md:w-[503px] min-h-[300px] md:h-auto rounded-[10px]" style="background-color:rgba(255, 255, 255, 0.85)">
+            <p class="text-[#24317B] md:text-left text-justify px-10 md:px-0 mt-5 mb-5 font-semibold md:max-w-[433px] tracking-tighter leading-[27px] lg:text-2xl text-base">
                 Solaris, fundada en 1994 naciendo con el propósito de ofrecer soluciones de energía que mejoren la calidad
                 de vida de sus clientes y contribuyan al desarrollo sostenible de Honduras. En 2018 el Ing. Iván Pastor con su
                 socio Adolfo Montenegro compraron las acciones de Solaris, para renovar e innovar las soluciones de energía
                 solar. A lo largo de tres décadas, Solaris ha crecido gracias a su dedicación y compromiso con la
                 innovación, consolidándose como líder en el sector de energías renovables en el país.
             </p>
-        </div>
+        </div>        
     </div>
-    <div class="w-full z-[111] mt-14 md:mt-0 rounded-[20px]">
-        <div class="md:pl-[5%] w-[503px] h-[350px] rounded-[20px]" style="background-color:rgba(255, 255, 255, 0.85)">
+
+    <div class="w-full z-[111] md:mt-0 mt-14 rounded-[20px]">
+        <div class="md:pl-[5%] w-full md:w-[503px] h-[350px] rounded-[20px]" style="background-color:rgba(255, 255, 255, 0.85)">
             <p class="text-[#24317B] md:text-left text-justify px-10 py-4 md:px-0 lg:mt-[386px] md:mt-[460px] lg:mr-0 md:mr-10 font-semibold max-w-[433px] tracking-tighter leading-[23.5px] lg:text-xl text-base">
                 Desde sus primeros pasos, Solaris ha sido pionera en la integración de energía limpia en diversas
                 comunidades, comenzando con proyectos pequeños y creciendo para ofrecer soluciones a gran escala en toda
@@ -31,6 +37,7 @@
         </div>
     </div>
 </div>
+
 <div id="dotlottie-container" class="fixed top-[60%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 z-[-1]">
     <dotlottie-player id="lottiePlayer" src="https://lottie.host/444703e1-31d7-4100-8db4-11cb519a5096/l3MZhb8ZV5.lottie"
         background="transparent" style="width: 150vw; height: 5%" loop></dotlottie-player>

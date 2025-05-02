@@ -1,7 +1,7 @@
 
 <style>
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper1-next,
+  .swiper1-prev {
     color: #000;
     top: unset !important;
     bottom: 0px !important;
@@ -9,11 +9,11 @@
     z-index: 10;
   }
 
-  .swiper-button-next {
+  .swiper1-next {
     right: 10px;
   }
   
-  .swiper-button-prev {
+  .swiper1-prev {
     left: 10px;
   }
 
@@ -21,10 +21,11 @@
     position: relative;
     padding-bottom: 50px; 
   }
+
 </style>
 
 
-<div class="w-full h-[250vh] flex bg-[#F2F5FA] pb-[300px]" id="blog">
+<div class="w-full h-[250vh] flex bg-[#F2F5FA] pb-[500px]" id="blog">
     <div class="w-1/3 flex flex-col p-8 gap-5">
       <div class="p-4" style="height: 20%;">
         <h1 class="text-[96px] leading-[100%] font-semibold" style="color: #24317B;">
@@ -59,14 +60,15 @@
       
         <div class="w-full max-w-full overflow-hidden">
           <iframe 
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1049401630557152&show_text=true&width=400" 
+            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsolarishonduras%2Fposts%2F1078844030946245&show_text=true&width=500" 
             width="100%" 
-            height="679" 
+            height="660" 
             style="border:none;overflow:hidden" 
             scrolling="no" 
             frameborder="0" 
             allowfullscreen="true" 
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
         </div>
       </div>
       
@@ -74,7 +76,7 @@
   
     <div class="w-2/3 mx-auto mt-10">
       <div class="h-[20%]"></div>
-      <div class="swiper">
+      <div class="swiper mySwiper1">
         <div class="swiper-wrapper">
           @foreach ($blogs->chunk(4) as $blogGroup)
             <div class="swiper-slide">
@@ -87,7 +89,7 @@
                     <h3 class="text-xl text-center font-semibold text-black">
                       {{ $blog->titulo }}
                     </h3>
-                    <div class="text-black overflow-auto max-h-40 pr-2">
+                    <div class="text-black overflow-auto max-h-48 pr-2">
                       {!! $blog->descripcion !!}
                     </div>
                   </div>
@@ -97,26 +99,27 @@
           @endforeach
         </div>
 
-        <div class="swiper-button-next  bg-gray-600/70 p-7 rounded-full"></div>
-        <div class="swiper-button-prev  bg-gray-600/70 p-7 rounded-full"></div>
+        <div class="swiper-button-next swiper1-next bg-gray-600/70 p-7 rounded-full"></div>
+        <div class="swiper-button-prev swiper1-prev bg-gray-600/70 p-7 rounded-full"></div>
+         
         <div class="swiper-pagination"></div>
       </div>
-
     </div>    
   </div>
 
   <script>
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.mySwiper1', {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      el: '.swiper-pagination',
+      clickable: true,
       },
+
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper1-next',
+        prevEl: '.swiper1-prev',
       },
       breakpoints: {
         1024: { slidesPerView: 1 },

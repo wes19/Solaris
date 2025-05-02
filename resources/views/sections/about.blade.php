@@ -100,21 +100,12 @@
                 </div>
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-4 col-start-4 row-start-1"></div>
                 <div
-                    class=" absolute top-0 2xl:right-20 lg:right-5 h-[65%] w-[33%] flex flex-col justify-center  z-40 bg-[#000F33] text-[#FBED4F]">
-                    <p class="text-[22px] leading-[25.76px]">
-                        La misión de Solaris es
-                        proporcionar soluciones energéticas que sean eficientes, accesibles y ambientalmente
-                        responsables.
-                        Nos guiamos por valores fundamentales que incluyen el compromiso, la integridad, la innovación y
-                        la
-                        responsabilidad social. Estos valores son la base sobre la cual construimos relaciones sólidas y
-                        duraderas con nuestros clientes, colaboradores y socios.<br><br>
-                        En Solaris, creemos que la energía es un recurso que debe estar al servicio de las personas y
-                        del
-                        planeta. Por ello, nuestras prácticas empresariales buscan reducir nuestra huella ambiental,
-                        fortalecer a nuestras comunidades y crear un futuro donde la energía renovable sea accesible
-                        para
-                        todos.</p>
+                    class=" absolute top-0 2xl:right-20 lg:right-5 h-[65%] w-[33%] flex flex-col z-40 bg-[#000F33] text-[#FBED4F]">
+                    <p class="text-[26px] leading-[25.76px] mt-12">
+                        Impulsar el uso eficiente de la energía, contribuyendo a mejorar la calidad de vida 
+                        de las personas y la comunidad de una manera amigable con el medio ambiente, 
+                        ofreciendo soluciones económicamente auto sostenibles, que garanticen la satisfacción 
+                        de nuestros clientes, colaboradores y accionistas.</p>
                 </div>
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-3 col-start-5 row-start-1"></div>
                 <div class=" rounded-[25px] bg-[#000F33] col-span-1 row-span-1 col-start-5 row-start-4"></div>

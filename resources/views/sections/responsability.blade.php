@@ -18,15 +18,15 @@
     }
 
     .swiper-button-next {
-        color: #24317B;
+        color: #24317B !important;
     }
     .swiper-button-prev {
-        color: #24317B;
+        color: #24317B !important;
     }
 
 </style>
 
-<div class="swiper-container overflow-hidden">
+<div class="swiper-container overflow-hidden" id="RSE">
     <div class="swiper-wrapper">
 
         <!--Responsabilidad Ambiental-->
@@ -101,17 +101,20 @@
             
             <div class="w-full xl:w-1/2 flex flex-col justify-start ml-auto">
                 <div class="w-full text-center mb-4">
-                    <h3 class="text-[#1B3162] text-[65px] leading-[65px] font-bold">Reciclaje Responsable de baterías</h3>
+                    <h3 class="text-[#1B3162] text-[65px] leading-[65px] font-bold">Reciclaje Responsable de Equipos Solares</h3>
                 </div>
                 
-                <div class="bg-white shadow-md rounded-xl overflow-hidden relative">
-                    <img src="{{ asset('images/solaris-imagen.webp') }}" alt="Solaris" class="w-full h-full object-cover">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
-                        </svg>
+                <a href="https://www.youtube.com/shorts/TG65lr7tRl0" target="_blank" class="relative w-full">
+                    <div class="bg-white shadow-md rounded-xl overflow-hidden relative">
+                        <img src="{{ asset('images/solaris-imagen.webp') }}" alt="Solaris" class="w-full h-full object-cover">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
+                            </svg>
+                        </div>
                     </div>
-                </div>
+                </a>
+
             </div>
         
             <div class="w-full xl:w-1/2 h-full max-w-xl text-left mr-8 ml-auto pt-24">

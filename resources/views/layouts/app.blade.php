@@ -37,8 +37,8 @@
                     <li><a href='#hero' class="text-white hover:text-gray-300">INICIO</a></li>
                     <li><a href="#sobre-nosotros" class="text-white hover:text-gray-300">NOSOTROS</a></li>
                     <li><a href="#proyectos" class="text-white hover:text-gray-300">PROYECTOS</a></li>
-                    <li><a href="#soluciones" class="text-white hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
                     <li><a href="#RSE" class="text-white hover:text-gray-300">RSE</a></li>
+                    <li><a href="#soluciones" class="text-white hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
                     <li><a href="#blog" class="text-white hover:text-gray-300">BLOG</a></li>
                     <li><a href="#contactanos" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
                 </ul>
@@ -67,9 +67,9 @@
             <li><a href='#hero' class="hover:text-gray-300">INICIO</a></li>
             <li><a href="#sobre-nosotros" class="hover:text-gray-300">NOSOTROS</a></li>
             <li><a href="#proyectos" class="hover:text-gray-300">PROYECTOS</a></li>
+            <li><a href="#RSE" class="hover:text-gray-300">RSE</a></li>
             <li><a href="#soluciones" class="hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
             <li><a href="#blog" class="hover:text-gray-300">BLOG</a></li>
-            <li><a href="#RSE" class="hover:text-gray-300">RSE</a></li>
             <li><a href="#contactanos" class="hover:text-gray-300">CONTÁCTANOS</a></li>
         </ul>
     </div>
