@@ -26,7 +26,7 @@
 
 </style>
 
-<div class="swiper-container overflow-hidden" id="RSE">
+<div class="swiper-container overflow-hidden hidden lg:block" id="RSE">
     <div class="swiper-wrapper">
 
         <!--Responsabilidad Ambiental-->
@@ -120,22 +120,17 @@
             <div class="w-full xl:w-1/2 h-full max-w-xl text-left mr-8 ml-auto pt-24">
                 <div class="text-[#1B3162] text-[24px] leading-[18px] font-normal max-h-[400px] overflow-y-auto pr-4">
                     <p class="text-xl text-[#1B3162]">
-                        En Solaris creemos firmemente en que cada acción cuenta cuando se trata de cuidar nuestro planeta. 
-                        Por eso, hemos firmado un convenio con Recicladora Diamante, una empresa hondureña especializada 
-                        en el tratamiento y reciclaje de materiales, con el fin de dar una correcta disposición a las 
-                        baterías de ácido plomo que han cumplido su vida útil. Este paso no solo contribuye a la reducción 
-                        de desechos contaminantes, sino que también permite que los materiales sean tratados de manera 
-                        responsable y segura.<br><br>
+                        En Solaris creemos firmemente que cada acción cuenta cuando se trata de cuidar nuestro planeta. Por eso, 
+                        hemos donado al departamento de reciclaje de Aparatos Eléctricos y Electrónicos (RAEE) una serie de 
+                        baterías de ácido plomo que han cumplido su vida útil. Esta acción forma parte de un convenio firmado 
+                        con Recicladora Diamante, una empresa hondureña especializada en el tratamiento y reciclaje de materiales.<br><br>
 
-                        Gracias a este acuerdo, no solo garantizamos un manejo ambientalmente adecuado de nuestros equipos, 
-                        sino que además, los recursos generados a través del reciclaje serán donados a la Fundación Hondureña 
-                        de Niños con Cáncer. Esta doble intención —ambiental y social— refleja nuestro compromiso por generar 
-                        un impacto positivo tanto en nuestro entorno natural como en las comunidades que más lo necesitan.<br><br>
+                        Con esta iniciativa, buscamos asegurar una disposición adecuada de estos residuos, contribuyendo a la 
+                        reducción de desechos contaminantes y garantizando que los materiales sean tratados de manera responsable y segura.<br><br>
 
-                        En conjunto con Recicladora Diamante, seguimos construyendo el camino hacia una Honduras más sostenible 
-                        y consciente. Invitamos a todos nuestros clientes, aliados y seguidores a sumarse al cambio, adoptando 
-                        prácticas más responsables con el medio ambiente. Porque cuando unimos esfuerzos, el futuro se llena de 
-                        energía limpia, solidaridad y esperanza.<br><br>
+                        Gracias a este acuerdo, no solo promovemos un manejo ambientalmente responsable de nuestros equipos, sino que 
+                        también impulsamos una economía circular a través del reciclaje de componentes que de otro modo terminarían 
+                        contaminando el entorno
                     </p>
                 </div>
             </div>

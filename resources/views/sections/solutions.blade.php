@@ -1,7 +1,8 @@
 
-<div class="flex min-h-screen w-full bg-[#FFFFFF]" id="soluciones">
-    <div class="w-[30%] flex flex-col items-center justify-center p-6">
-        <h2 id="productos-soluciones-2" class="hidden text-[24px] text-[#24317B] font-bold text-center mb-4 uppercase">
+<div id="soluciones" class="flex flex-col lg:flex-row min-h-screen w-full bg-[#FFFFFF]">
+    <!-- Panel izquierdo -->
+    <div class="w-full lg:w-[30%] flex flex-col items-center justify-center p-6">
+        <h2 id="productos-soluciones-2" class="text-[24px] text-[#24317B] font-bold text-center mb-4 uppercase lg:hidden block">
             Productos y Soluciones
         </h2>
         <div class="bg-black p-5 rounded-[2px] w-full">
@@ -32,12 +33,13 @@
         </div>
     </div>
 
-    <div id="productos-soluciones" class="w-[70%] flex items-center">
-        <div class="flex flex-col px-10 py-12">
-            <h1 class="uppercase text-[96px] leading-[86%] font-extrabold text-[#24317B]">
+    <!-- Panel derecho -->
+    <div id="productos-soluciones" class="w-full lg:w-[70%] flex items-center">
+        <div class="flex flex-col px-6 sm:px-10 py-12">
+            <h1 class="uppercase text-[42px] sm:text-[64px] lg:text-[96px] leading-[86%] font-extrabold text-[#24317B] text-center lg:text-left">
                 Productos<br>y Soluciones
             </h1>
-            <p class="text-[#24317B] text-[24px] font-normal leading-[103%] mt-16 text-left mr-48">
+            <p class="text-[#24317B] text-[16px] sm:text-[20px] lg:text-[24px] font-normal leading-[150%] mt-8 lg:mt-16 text-justify lg:text-left lg:mr-48">
                 Solaris ofrece una gama completa de soluciones energéticas, que incluye la instalación de sistemas de paneles solares para hogares, empresas e industrias.
                 Nuestros servicios abarcan desde diseños de ingeniería, estudios de factibilidad, Suministro e instalación, monitoreo y mantenimiento. Cada solución es adaptada a las necesidades del cliente, asegurando el más rápido retorno sobre la inversión.
                 <br><br>
@@ -45,6 +47,8 @@
             </p>
         </div>
     </div>
+</div>
+
 
     @php
     $modales = [
@@ -116,36 +120,38 @@
     ];
     @endphp
 
-    @foreach($modales as $index => $modal)
-        <div id="modal-{{ $index }}" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-end">
-            <div class="bg-white p-8 rounded-lg w-[60%] max-w-[800px] relative mr-48 flex flex-col gap-6">
-                <button class="absolute top-2 right-4 text-gray-700 text-2xl font-bold" onclick="closeModal({{ $index }})">&times;</button>
+@foreach($modales as $index => $modal)
+    <div id="modal-{{ $index }}" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center sm:justify-end">
+        <div class="bg-white p-6 rounded-lg w-[85%] sm:w-[50%] max-w-[700px] relative sm:mr-40 flex flex-col gap-4">
+            <button class="absolute top-2 right-4 text-gray-700 text-2xl font-bold" onclick="closeModal({{ $index }})">&times;</button>
 
-                <div class="w-full text-center">
-                    <h2 class="text-[48px] text-[#24317B] font-bold leading-[39px]">
-                        {{ $modal['titulo'] }}
-                    </h2>
+            <div class="w-full text-center">
+                <h2 class="text-[32px] sm:text-[40px] text-[#24317B] font-bold leading-[36px]">
+                    {{ $modal['titulo'] }}
+                </h2>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="w-full sm:w-1/2 p-1">
+                    <img src="{{ asset('images/' . $modal['imagen']) }}" alt="{{ $modal['titulo'] }}" class="rounded-lg w-full h-auto">
                 </div>
 
-                <div class="flex gap-6">
-                    <div class="w-1/2 p-1">
-                        <img src="{{ asset('images/' . $modal['imagen']) }}" alt="{{ $modal['titulo'] }}" class="rounded-lg w-full h-auto">
+                <div class="w-full sm:w-1/2 flex flex-col justify-between">
+                    <div class="overflow-y-auto max-h-[250px] sm:max-h-[300px] pr-2">
+                        <p class="text-gray-700 text-[14px] sm:text-[16px] font-normal leading-[28px] sm:leading-[32px]">
+                            {!! nl2br(e($modal['descripcion'])) !!}
+                        </p>
                     </div>
-
-                    <div class="w-1/2 flex flex-col justify-between">
-                        <div class="overflow-y-auto max-h-[300px] pr-2">
-                            <p class="text-gray-700 text-[17px] font-normal leading-[34px]">
-                                {!! nl2br(e($modal['descripcion'])) !!}
-                            </p>
-                        </div>
-                        <button class="bg-[#66944D] text-[17px] font-semibold uppercase self-start text-white px-6 py-2 rounded-[10px]">
-                            Cotizar
-                        </button>                        
-                    </div>
+                    <button class="bg-[#66944D] text-[14px] sm:text-[16px] font-semibold uppercase self-start text-white px-5 py-2 rounded-[8px] mt-4 sm:mt-0">
+                        Cotizar
+                    </button>
                 </div>
             </div>
         </div>
-    @endforeach
+    </div>
+@endforeach
+
+
 
 </div>
 

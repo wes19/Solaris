@@ -42,11 +42,12 @@
                     <li><a href="#blog" class="text-white hover:text-gray-300">BLOG</a></li>
                     <li><a href="#contactanos" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
                 </ul>
-                <div class="lg:flex items-center space-x-4">
+                <div class="flex items-center mr-4">
                     <a href="https://solarismarkethn.com/" class="relative">
-                      <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
+                        <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8 hidden lg:block">
                     </a>
-                </div>                                
+                </div>
+                                
                 <div class="lg:hidden">
                     <button id="menu-button" class="text-white focus:outline-none">
                         <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -71,6 +72,11 @@
             <li><a href="#soluciones" class="hover:text-gray-300">PRODUCTOS Y SOLUCIONES</a></li>
             <li><a href="#blog" class="hover:text-gray-300">BLOG</a></li>
             <li><a href="#contactanos" class="hover:text-gray-300">CONTÁCTANOS</a></li>
+            <li class="flex items-center">
+                <a href="https://solarismarkethn.com/" class="relative">
+                    <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -80,25 +86,22 @@
 
     <footer>
         <div class="w-full relative flex flex-col justify-end items-end">
-            <!--<div class=" w-full h-[150px] overflow-hidden flex items-center justify-center gap-11 bg-slate-600">
-                <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
-                <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
-                <div class="w-[34.39px] h-[35px] bg-orange-600"></div>
-            </div>-->
-            <!-- <div class="w-full h-[134px] left-0 top-[64px]  bg-black"></div> -->
-            <div class=" flex justify-center items-center bg-black w-full h-[134px]">
-                <span class="text-white text-2xl font-normal font-['Raleway'] capitalize leading-normal">
+            <div class="flex flex-wrap justify-center items-center bg-black w-full h-auto px-4 py-6 gap-x-4 gap-y-2 text-center sm:justify-center lg:justify-center">
+                <span class="text-white text-base sm:text-lg lg:text-2xl font-normal font-['Raleway'] capitalize leading-normal">
                     Solaris Honduras © {{ date('Y') }} | Derechos Reservados |
                 </span>
-                <span class="text-white text-2xl font-normal font-['Raleway'] underline capitalize leading-normal"> </span>
-                <span class="text-[#fbed4f] text-2xl font-normal font-['Raleway'] underline capitalize leading-normal">
+                
+                <span class="text-[#fbed4f] text-base sm:text-lg lg:text-2xl font-normal font-['Raleway'] underline capitalize leading-normal">
                     <a target="_blank" href="{{ route('privacy') }}">Política de Privacidad</a>
                 </span>
-                <span class="text-white text-2xl font-normal font-['Raleway'] underline capitalize leading-normal"> </span>
-                <span class="text-white text-2xl font-normal font-['Raleway'] capitalize leading-normal"> | Powered by 24Studio</span>
+                
+                <span class="text-white text-base sm:text-lg lg:text-2xl font-normal font-['Raleway'] capitalize leading-normal">
+                    | Powered by 24Studio
+                </span>
             </div>
         </div>
     </footer>
+
     
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')
@@ -158,6 +161,7 @@
             `;
             menuIcon.classList.remove('menu-open');
         });
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <script>
@@ -171,7 +175,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>

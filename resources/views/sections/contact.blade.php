@@ -1,6 +1,8 @@
 
 <div class="eco_mapdiv mx-[5%]" id="contactanos">
-    <h2 class="uppercase text-[96px] font-semibold mb-4 text-[#24317B] mt-32">Contáctanos</h2>
+  <h2 class="uppercase text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[96px] font-semibold mb-4 text-[#24317B] mt-32">
+    Contáctanos
+  </h2>
     
     <iframe src="https://www.google.hn/maps/d/u/0/embed?mid=104kFL8LqPLpVIZ-is6sFlhKoft2zoteo" width="100%" height="480"></iframe>
 </div>

@@ -1,13 +1,14 @@
+
 <div class="flex flex-col justify-center items-center bg-transparent xl:px-0 lg:px-10 pb-[600px]" id="proyectos">
     <div class="text-center pt-32">
-        <p class="font-extrabold text-[32px] text-[#24317B]">
-          Algunos de los proyectos que hemos impulsado
+        <p class="font-extrabold text-[32px] text-[#24317B] sm:text-[24px]">
+            Algunos de los proyectos que hemos impulsado
         </p>
-
-        <p class="font-extrabold text-[40px] text-[#24317B] uppercase mt-2">
-          Aplicando energía limpia en distintos lugares del país.
+    
+        <p class="font-extrabold text-[40px] text-[#24317B] uppercase mt-2 sm:text-[28px]">
+            Aplicando energía limpia en distintos lugares del país.
         </p>
-    </div>
+    </div>    
     
     <div class="w-[80%] mx-auto pt-16">
 
@@ -30,13 +31,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -53,7 +57,7 @@
             </div>
         </div>
 
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -91,13 +95,16 @@
         </button>
 
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -114,7 +121,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -152,13 +159,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -175,7 +185,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -213,13 +223,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -236,7 +249,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -274,13 +287,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -297,7 +313,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -335,13 +351,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -358,7 +377,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -396,13 +415,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -419,7 +441,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -458,13 +480,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -481,7 +506,7 @@
             </div>
         </div>
     
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
@@ -519,13 +544,16 @@
         </button>
       
         <div x-show="open" x-transition.duration.300ms class="overflow-hidden p-4 -mt-5 bg-[#24317B] text-black rounded-b-[20px] transition-all duration-300 ease-in-out">
-            <div id="projects-grid" class="grid grid-cols-4 grid-rows-2 gap-2 w-full min-h-[600px] max-w-7xl">
+            <div id="projects-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-7xl auto-rows-fr">
                 <template x-for="proyecto in paginatedItems" :key="proyecto.id">
-                    <div class="relative group flex flex-col items-center">
-                        <img :src="'/storage/' + proyecto.imagen" alt="" class="w-full h-full object-cover max-w-[310px] max-h-[310px]" />
-                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300 "></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)" class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="mt-2 text-center text-white font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
+                    <div class="relative group flex flex-col items-center bg-[#dfdfdf] rounded-xl overflow-hidden">
+                        <img :src="'/storage/' + proyecto.imagen"
+                             alt=""
+                             class="w-full aspect-square object-cover" />
+                        <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                             class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
                 </template>
             </div>
@@ -542,7 +570,7 @@
             </div>
         </div>
         
-        <div x-show="modalOpen" @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">

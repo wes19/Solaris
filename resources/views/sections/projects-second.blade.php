@@ -50,7 +50,7 @@
               </div>
             </a>
             <div class="mt-2 text-[16px] md:text-[20px] font-semibold text-[#24317B]">
-              Hospital Santa Lucía
+              Hospital, Clinica y Óptica Santa Lucía
             </div>
           </div> 
 

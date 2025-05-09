@@ -1,20 +1,25 @@
 <div class="p-4 bg-white">
-    <div class="grid grid-cols-2 gap-4">
-      <div class="p-12">
-        <h2 class="text-[#24317B] text-[93px] font-bold leading-[100%]">Nuestras Marcas Asociadas</h2>
-        <h3 class="text-[#24317B] text-[32px] font-bold leading-[100%] mt-8">Nuestros mejores protagonistas</h3>
-      </div>
-      <div class="p-12"> 
-        <span class="text-[#000] text-[27px] leading-[100%] font-semibold">Los requisitos de los clientes son diversos
-            y por eso adaptamos nuestra oferta a ellos, cumpliendo siempre los más altos estándares de calidad.</span>
-        <p class="text-[#000] text-[17px] leading-[100%] font-normal mt-4">Los requisitos de nuestros clientes para un Sistema Fotovoltaico 
-            pueden ser completamente diferentes. Ya sea un sistema de energía solar con requerimientos específicos, 
-            diferentes tipos de techo, necesidades de monitoreo y administración, tenemos todo y solo lo mejor. 
-            Nuestros productos son fabricados por las compañías con más renombre en la industria y son sinónimo de 
-            calidad, tecnología, rendimiento y duración, los cuales son cuidadosamente seleccionados por nuestros expertos.</p>
-      </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="p-6 sm:p-8 lg:p-12">
+      <h2 class="text-[#24317B] text-[42px] sm:text-[64px] lg:text-[93px] font-bold leading-[100%]">
+        Nuestras Marcas Asociadas
+      </h2>
+      <h3 class="text-[#24317B] text-[20px] sm:text-[26px] lg:text-[32px] font-bold leading-[100%] mt-6 sm:mt-8">
+        Nuestros mejores protagonistas
+      </h3>
+    </div>
+    <div class="p-6 sm:p-8 lg:p-12">
+      <span class="text-[#000] text-[18px] sm:text-[22px] lg:text-[27px] leading-[130%] font-semibold block">
+        Los requisitos de los clientes son diversos y por eso adaptamos nuestra oferta a ellos, cumpliendo siempre los más altos estándares de calidad.
+      </span>
+      <p class="text-[#000] text-[15px] sm:text-[16px] lg:text-[17px] leading-[150%] font-normal mt-4">
+        Los requisitos de nuestros clientes para un Sistema Fotovoltaico pueden ser completamente diferentes. Ya sea un sistema de energía solar con requerimientos específicos,
+        diferentes tipos de techo, necesidades de monitoreo y administración, tenemos todo y solo lo mejor. Nuestros productos son fabricados por las compañías con más renombre en la industria y son sinónimo de calidad, tecnología, rendimiento y duración, los cuales son cuidadosamente seleccionados por nuestros expertos.
+      </p>
     </div>
   </div>
+</div>
+
   <div class="p-8 bg-white">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
       <img src="images/logos/soluna.webp" alt="Ritar" class="h-20">
@@ -30,6 +35,7 @@
       <img src="images/logos/solis.webp" alt="Sol" class="h-20">
       <img src="images/logos/pytes.webp" alt="Pytes" class="h-20">
       <img src="images/logos/trinasolar.webp" alt="TrinaSolar" class="h-20">
+      <img src="images/logos/modulosolar.webp" alt="ModuloSolar" class="h-20">
       <!--<img src="images/logos/morningstar.webp" alt="Morningstar" class="h-20">-->
       <!--<img src="images/logos/sma.webp" alt="SMA" class="h-20">-->
       <!--<img src="images/logos/Peimar.webp" alt="Peimar" class="h-20">

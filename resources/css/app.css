@@ -63,4 +63,21 @@
   html {
     scroll-behavior: smooth;
   }
-
+  .minimal-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #24317B transparent;
+  }
+  
+  .minimal-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .minimal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .minimal-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #24317B;
+    border-radius: 2px;
+  }
+  

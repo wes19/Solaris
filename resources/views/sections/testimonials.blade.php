@@ -11,7 +11,7 @@
     <div class=" flex flex-col">
         <div class="flex flex-col">
             <div class="w-full h-full flex justify-center flex-col xl:pl-[212px] lg:items-center xl:items-start">
-                <h3 class="w-full max-w-[433px] text-4xl sm:text-5xl lg:text-6xl text-[#000f33] mb-[35px] font-semibold leading-[111%]">
+                <h3 class="w-full max-w-[433px] text-4xl sm:text-5xl lg:text-6xl pl-3 text-[#000f33] mb-[35px] font-semibold leading-[111%]">
                     Testimonios de Clientes
                 </h3>                
             </div>
@@ -41,22 +41,24 @@
                                     <img src="{{ asset('images/nubes.webp') }}" alt="Fondo de nubes"
                                         class="absolute inset-0 w-full h-full object-cover rounded-xl z-0">
                                     <div class="relative z-10 p-4 w-full h-full flex flex-col justify-center items-center text-[#24317B]">
-                                        <a href="{{ $testimonio->url_video }}" target="_blank" class="relative w-full">
-                                            <img src="{{ Voyager::image($testimonio->imagen) }}" alt="Imagen de testimonio" class="p-4 mb-4">
-                                            <div class="absolute inset-0 flex items-center justify-center">
-                                                <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
-                                                </svg>
-                                            </div>
-                                        </a>
+                                        <div class="p-4 w-full">
+                                            <a href="{{ $testimonio->url_video }}" target="_blank" class="relative w-full">
+                                                <img src="{{ Voyager::image($testimonio->imagen) }}" alt="Imagen de testimonio" class="mb-4 rounded-[8px]">
+                                                <div class="absolute inset-0 flex items-center justify-center">
+                                                    <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
                                         <p class="mb-[45px] w-full max-w-[235px] text-2xl font-semibold leading-[111%]">
                                             {{ $testimonio->nombre }}
                                         </p>
-                                        <p class="w-full max-w-[235px] text-xl font-normal leading-[111%]">
-                                            <div class="p-6 text-[18px]">
+                                        <div class="w-full max-w-[235px] text-xl font-normal leading-[111%]">
+                                            <div class="text-[18px] max-h-[150px] overflow-y-auto minimal-scrollbar">
                                                 {!! $testimonio->descripcion !!}
-                                            </div>
-                                        </p>
+                                            </div>                                                                                      
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>

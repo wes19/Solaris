@@ -22,7 +22,7 @@
     }
 </style>
 
-<div class="swiper-container overflow-hidden mb-96">
+<div class="swiper-container overflow-hidden mb-96 hidden lg:block">
     <div class="swiper-wrapper">
 
         <!--Nuestro Brand-->
