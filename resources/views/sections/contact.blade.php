@@ -176,24 +176,24 @@
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-black">Nombre</label>
-                            <input type="text" name="nombre" required class="mt-1 block w-full border border-black rounded-md shadow-sm focus:ring-black focus:border-black" />
+                            <input type="text" name="nombre" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
             
                         <div>
                             <label class="block text-sm font-medium text-black">Correo electrónico</label>
-                            <input type="email" name="correo" required class="mt-1 block w-full border border-black rounded-md shadow-sm focus:ring-black focus:border-black" />
+                            <input type="email" name="correo" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
             
                         <div>
                             <label class="block text-sm font-medium text-black">Número de teléfono</label>
-                            <input type="text" name="telefono" required class="mt-1 block w-full border border-black rounded-md shadow-sm focus:ring-black focus:border-black" />
+                            <input type="text" name="telefono" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
                     </div>
             
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-medium text-black">Experiencia</label>
-                            <select name="exp" class="mt-1 block w-full border border-black rounded-md shadow-sm focus:ring-black focus:border-black">
+                            <select name="exp" class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 <option value="0" {{ old('exp') == 0 ? 'selected' : '' }}>Experiencia Laboral</option>
                                 <option value="Practica profesional" {{ old('exp') == "Practica profesional" ? 'selected' : '' }}>Práctica profesional</option>
                                 <option value="entre 1-2 años" {{ old('exp') == "entre 1-2 años" ? 'selected' : '' }}>entre 1-2 años</option>
@@ -208,7 +208,7 @@
             
                         <div>
                             <label class="block text-sm font-medium text-black">Ciudad</label>
-                            <input type="text" name="ciudad" required class="mt-1 block w-full border border-black rounded-md shadow-sm focus:ring-black focus:border-black" />
+                            <input type="text" name="ciudad" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
                         </div>
             
                         <div>

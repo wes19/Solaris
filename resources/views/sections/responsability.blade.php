@@ -121,7 +121,7 @@
                 <div class="text-[#1B3162] text-[24px] leading-[18px] font-normal max-h-[400px] overflow-y-auto pr-4">
                     <p class="text-xl text-[#1B3162]">
                         En Solaris creemos firmemente que cada acción cuenta cuando se trata de cuidar nuestro planeta. Por eso, 
-                        hemos donado al departamento de reciclaje de Aparatos Eléctricos y Electrónicos (RAEE) una serie de 
+                        hemos donado al departamento de Reciclaje de Aparatos Eléctricos y Electrónicos (RAEE) una serie de 
                         baterías de ácido plomo que han cumplido su vida útil. Esta acción forma parte de un convenio firmado 
                         con Recicladora Diamante, una empresa hondureña especializada en el tratamiento y reciclaje de materiales.<br><br>
 

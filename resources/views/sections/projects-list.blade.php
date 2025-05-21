@@ -38,7 +38,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -57,12 +57,12 @@
             </div>
         </div>
 
-        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">
+        <div x-show="modalOpen" x-cloak @click.away="closeModal" class="fixed inset-0 bg-[#24317B] bg-opacity-80 flex justify-center items-center z-50">  
             <div class="bg-black bg-opacity-40 fixed flex justify-center items-center w-full h-full">
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -71,7 +71,8 @@
                         <p x-html="modalContent"></p>
                     </div>
                 </div>
-            </div>            
+            </div>
+
             <button @click="closeModal" class="absolute top-4 right-4 text-white text-5xl">&times;</button>
         </div>
       </div>
@@ -102,7 +103,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -126,7 +127,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -166,7 +167,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -190,7 +191,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -230,7 +231,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -254,7 +255,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -294,7 +295,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -318,7 +319,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -358,7 +359,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -382,7 +383,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -422,7 +423,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -446,7 +447,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -487,7 +488,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -511,7 +512,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>
@@ -551,7 +552,7 @@
                              alt=""
                              class="w-full aspect-square object-cover" />
                         <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-0 transition duration-300"></div>
-                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion)"
+                        <div @click="openModal('/storage/' + proyecto.imagen, proyecto.nombre_proyecto, proyecto.descripcion, proyecto.url_video)"
                              class="absolute cursor-pointer inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300"></div>
                         <div class="mt-2 text-center text-black font-bold text-[16px]" x-text="proyecto.nombre_proyecto"></div>
                     </div>
@@ -575,7 +576,7 @@
                 <div class="rounded-lg p-8 max-w-7xl w-full flex flex-wrap md:flex-nowrap items-center max-h-[700px]">
                     <a :href="modalUrl" target="_blank" class="relative w-full md:w-1/2 max-w-[500px] mx-auto block">
                         <img :src="modalImage" alt="" class="w-full h-auto rounded-[50px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                        <svg x-show="modalUrl" xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto w-16 h-16 text-white opacity-80 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </a>

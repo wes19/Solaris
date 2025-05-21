@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body class="font-raleway">
@@ -83,6 +84,23 @@
     <main>
         @yield('content')
     </main>
+
+    <div id="fab" class="fixed bottom-6 right-6 z-[150] flex flex-col items-end space-y-3 group">
+      <a href="https://wa.me/1234567890?text=Hola,%20quiero%20contactar%20contigo" target="_blank">
+        <div class="relative">
+          <div class="absolute right-[90px] bottom-4 bg-blue-500 text-white text-lg px-6 py-1 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-xs whitespace-nowrap">
+            ¿En qué puedo ayudarte?
+            <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 bg-blue-500 rotate-45"></div>
+          </div>
+            <button id="fab-toggle" class="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-white shadow-lg overflow-hidden p-0 flex items-center justify-center transition-transform hover:rotate-12 border z-60">
+            <div class="w-full h-full rounded-full overflow-hidden">
+              <img src="{{ asset('images/logo1.webp') }}" alt="Logo"
+                class="w-full h-full object-contain" />
+            </div>
+          </button>
+        </div>
+      </a>
+    </div>
 
     <footer>
         <div class="w-full relative flex flex-col justify-end items-end">
@@ -175,6 +193,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
