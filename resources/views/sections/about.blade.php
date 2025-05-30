@@ -20,6 +20,15 @@
         position: absolute;
         color: white !important;
     }
+
+  .mySwiper4 .swiper-button-next,
+  .mySwiper4 .swiper-button-prev {
+    color: white !important;        
+    background: none !important;    
+    top: 50% !important;            
+    width: auto;
+    height: auto;
+  }
 </style>
 
 <div class="swiper-container overflow-hidden mb-96 hidden lg:block">
@@ -213,4 +222,70 @@
         
     </div>
 </div>
+
+
+<div class="block lg:hidden w-full h-[70vh] relative">
+  <div class="swiper mySwiper4 h-full">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide w-full h-full flex flex-col items-center justify-center bg-[#000F33] relative">
+        <img src="/images/about.webp" alt="About" class="w-full h-full object-contain" />
+        <p class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-[72px] font-semibold text-center"
+           style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+          Nuestro Brand Purpose
+        </p>
+      </div>
+
+      <div class="swiper-slide h-full flex items-center justify-center bg-[#000F33] p-6">
+        <p class="text-[#FBED4F] text-lg leading-relaxed font-medium text-center">
+          <strong>Misión:</strong><br>
+          Impulsar el uso eficiente de la energía, contribuyendo a mejorar la calidad de vida  
+          de las personas y la comunidad de una manera amigable con el medio ambiente, 
+          ofreciendo soluciones económicamente auto sostenibles, que garanticen la satisfacción 
+          de nuestros clientes, colaboradores y accionistas.
+        </p>
+      </div>
+
+      <div class="swiper-slide h-full flex items-center justify-center bg-[#000F33] p-6">
+        <p class="text-[#FBED4F] text-xl font-semibold text-center">
+          <strong>Visión:</strong><br>
+          Ser la marca de referencia en el ámbito de Eficiencia Energética.
+        </p>
+      </div>
+
+      <div class="swiper-slide h-full flex flex-col items-center justify-center bg-[#000F33] p-6 text-[#FBED4F]">
+        <h3 class="text-xl font-semibold mb-4">Nuestros Valores:</h3>
+        <ul class="list-disc text-left text-xl space-y-2">
+          <li>Excelencia</li>
+          <li>Innovación</li>
+          <li>Integridad</li>
+          <li>Respeto</li>
+          <li>Enfoque en el cliente</li>
+        </ul>
+      </div>
+
+    </div>
+
+
+  <div class="swiper-button-prev swiper4-prev"></div>
+  <div class="swiper-button-next swiper4-next"></div>
+  </div>
+</div>
+
+<script>
+  const swiper4 = new Swiper('.mySwiper4', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.swiper4-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper4-next',
+      prevEl: '.swiper4-prev',
+    },
+  });
+</script>
+
 

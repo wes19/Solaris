@@ -1,20 +1,17 @@
 
 <style>
-  .swiper1-next,
-  .swiper1-prev {
-    color: #000;
-    top: unset !important;
-    bottom: 0px !important;
-    transform: translateY(0) !important;
-    z-index: 10;
+  .mySwiper1 .swiper1-prev,
+  .mySwiper1 .swiper1-next {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(114, 127, 144, 0.7);
+    border-radius: 50%;
+    display: flex;
+    position: static !important;
   }
 
-  .swiper1-next {
-    right: 10px;
-  }
-  
-  .swiper1-prev {
-    left: 10px;
+  .mySwiper1 .swiper1-pagination {
+    position: static !important;
   }
 
   .swiper {
@@ -89,13 +86,15 @@
         @endforeach
       </div>
 
-      <div class="swiper-button-next swiper1-next bg-gray-600/70 p-5 rounded-full"></div>
-      <div class="swiper-button-prev swiper1-prev bg-gray-600/70 p-5 rounded-full"></div>
-      <div class="swiper-pagination"></div>
+      <div class="mySwiper1-controls flex items-center justify-center gap-4 absolute bottom-0 left-0 w-full mt-4 z-20">
+        <div class="swiper-button-prev swiper1-prev !static"></div>
+        <div class="swiper-pagination swiper1-pagination !static"></div>
+        <div class="swiper-button-next swiper1-next !static"></div>
+      </div>
     </div>
+
   </div>
 </div>
-
 
 
   <script>

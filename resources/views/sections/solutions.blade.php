@@ -142,9 +142,10 @@
                             {!! nl2br(e($modal['descripcion'])) !!}
                         </p>
                     </div>
-                    <button class="bg-[#66944D] text-[14px] sm:text-[16px] font-semibold uppercase self-start text-white px-5 py-2 rounded-[8px] mt-4 sm:mt-0">
-                        Cotizar
-                    </button>
+                    <a href="https://solarismarkethn.com/" target="_blank" rel="noopener noreferrer"
+                       class="bg-[#66944D] text-[14px] sm:text-[16px] font-semibold uppercase self-start text-white px-5 py-2 rounded-[8px] mt-4 sm:mt-0">
+                       Cotizar
+                    </a>
                 </div>
             </div>
         </div>

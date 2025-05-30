@@ -24,10 +24,10 @@ class ContactController extends Controller
             'ciudad' => 'required',
             'pais' => 'required',
             'mensaje' => 'required',
-            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha',
         ],[
             'name.required' => __('Necesitamos que ingrese su nombre para continuar'),
-            'email.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
+            'correo.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
         ]);
 
         DB::table('contactos')->insert(
@@ -60,10 +60,10 @@ class ContactController extends Controller
             'ciudad' => 'required',
             'depto' => 'required',
             'mensaje' => 'required',
-            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha',
         ],[
             'name.required' => __('Necesitamos que ingrese su nombre para continuar'),
-            'email.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
+            'correo.required' => __('Necesitamos que ingrese su correo electronico para continuar'),
         ]);
 
         DB::table('distribuidores')->insert(
@@ -96,7 +96,7 @@ class ContactController extends Controller
             'ciudad'  =>  'required',
             'exp' => 'not_in:0|required',
             'file' => 'required|max:10000|mimes:pdf,doc,docx,pptx',
-            //'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required|captcha',
 
         ],[
             'telefono.required' => 'Solo utilizar números.',

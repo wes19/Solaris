@@ -44,7 +44,7 @@
                     <li><a href="#contactanos" class="text-white hover:text-gray-300">CONTÁCTANOS</a></li>
                 </ul>
                 <div class="flex items-center mr-4">
-                    <a href="https://solarismarkethn.com/" class="relative">
+                    <a href="https://solarismarkethn.com/" class="relative" target="_blank">
                         <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8 hidden lg:block">
                     </a>
                 </div>
@@ -74,7 +74,7 @@
             <li><a href="#blog" class="hover:text-gray-300">BLOG</a></li>
             <li><a href="#contactanos" class="hover:text-gray-300">CONTÁCTANOS</a></li>
             <li class="flex items-center">
-                <a href="https://solarismarkethn.com/" class="relative">
+                <a href="https://solarismarkethn.com/" class="relative" target="_blank">
                     <img src="{{ asset('images/carrito.png') }}" alt="Carrito" class="h-8 w-8">
                 </a>
             </li>

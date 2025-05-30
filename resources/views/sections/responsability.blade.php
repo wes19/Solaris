@@ -1,7 +1,4 @@
 
-
-
-
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -134,13 +131,105 @@
                     </p>
                 </div>
             </div>
-
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </div>
 </div>
 
+
+
+<div class="block md:hidden h-screen w-full bg-white">
+  <div class="swiper mySwiper5 h-full">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide flex flex-col items-center justify-start p-4 h-full overflow-hidden">
+        <h2 class="text-3xl font-bold text-center mb-4">Responsabilidad Ambiental</h2>
+        <div class="w-full aspect-[2/1] bg-cover bg-center rounded-[30px]"
+             style="background-image: url('images/responsabilidad-ambiental.webp');">
+        </div>
+        <div class="overflow-y-auto flex-1 w-full text-sm text-gray-700">
+          <p class="text-base">
+            En Solaris, el compromiso con el medio ambiente es una prioridad. Nos esforzamos por reducir nuestro
+            impacto ambiental a través de cada proyecto ejecutado a nuestros clientes, promoviendo prácticas
+            sostenibles en todas nuestras operaciones. Desde la elección de materiales hasta el diseño de nuestros
+            proyectos, cada aspecto de nuestras actividades está pensado para minimizar nuestro impacto ecológico.
+            <br><br>
+            Nuestro programa de reforestación es solo una parte de este compromiso. Además, Solaris lleva a cabo
+            campañas de concienciación en comunidades y escuelas sobre la importancia de la energía renovable y la
+            conservación de recursos naturales. Creemos que cada proyecto es una oportunidad para educar e inspirar
+            a otros a adoptar prácticas que favorezcan un planeta más saludable.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide flex flex-col items-center justify-start p-4 h-full overflow-hidden">
+        <h2 class="text-xl font-bold text-center mb-4">
+          Solaris Reafirma su Compromiso<br />
+          con el Medioambiente a Través<br />
+          de una Jornada de Reforestación.
+        </h2>
+
+        <div class="overflow-y-auto flex-1 w-full text-sm text-gray-700 leading-relaxed space-y-4">
+          <p>
+            En Solaris, creemos firmemente en la importancia de contribuir al desarrollo sostenible y en el impacto positivo que podemos generar en nuestro entorno. Como parte de nuestras acciones de Responsabilidad Social Empresarial (RSE), llevamos a cabo una jornada de reforestación en el sector de La Montañita, en la salida a Danlí.
+          </p>
+          <p>
+            Durante esta actividad, nuestros colaboradores se unieron con entusiasmo para sembrar árboles en un área que ha sido afectada por la deforestación.
+          </p>
+          <p>
+            Conscientes de la necesidad de preservar nuestros recursos naturales, este esfuerzo no solo ayuda a recuperar espacios verdes, sino que también contribuye a la conservación del ecosistema, la reducción de la erosión del suelo y la mejora de la calidad del aire.
+            El compromiso de Solaris con el medioambiente va más allá de la generación de energía renovable; también buscamos promover acciones que fortalezcan la sostenibilidad y el bienestar de nuestras comunidades.
+            La participación activa de nuestros empleados en esta iniciativa demuestra el valor que le damos a la colaboración y la responsabilidad compartida en la protección del planeta.
+          </p>
+          <p>
+            Esta jornada de reforestación es solo una de las muchas iniciativas que impulsamos dentro de nuestro programa de RSE. Seguiremos desarrollando actividades que fomenten el respeto por el medioambiente y fortalezcan nuestra visión de un futuro más verde y sustentable.
+          </p>
+          <p>
+            En Solaris, estamos convencidos de que cada acción cuenta. Agradecemos a todos los colaboradores que hicieron posible esta actividad y reiteramos nuestro compromiso de continuar trabajando en proyectos que generen un impacto positivo en nuestra comunidad y en el planeta.
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper-slide bg-no-repeat bg-cover bg-center w-full h-full"
+           style="background-image: url('images/solaris-team.webp');">
+      </div>
+
+
+      <div class="swiper-slide flex flex-col items-center justify-start p-4 h-full overflow-hidden bg-white">
+        <h2 class="text-xl font-bold text-center mb-4">Reciclaje Responsable de Equipos Solares</h2>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="relative w-full rounded-xl overflow-hidden shadow-md mb-4">
+          <img src="images/solaris-imagen.webp" alt="Solaris" class="w-full object-cover rounded-xl" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
+            </svg>
+          </div>
+        </a>
+        <div class="overflow-y-auto flex-1 w-full text-sm text-gray-700 leading-relaxed space-y-4">
+          <p>
+            En Solaris creemos firmemente que cada acción cuenta cuando se trata de cuidar nuestro planeta. Por eso, 
+            hemos donado al departamento de Reciclaje de Aparatos Eléctricos y Electrónicos (RAEE) una serie de 
+            baterías de ácido plomo que han cumplido su vida útil. Esta acción forma parte de un convenio firmado 
+            con Recicladora Diamante, una empresa hondureña especializada en el tratamiento y reciclaje de materiales.
+          </p>
+          <p>
+            Con esta iniciativa, buscamos asegurar una disposición adecuada de estos residuos, contribuyendo a la 
+            reducción de desechos contaminantes y garantizando que los materiales sean tratados de manera responsable y segura.
+          </p>
+          <p>
+            Gracias a este acuerdo, no solo promovemos un manejo ambientalmente responsable de nuestros equipos, sino que 
+            también impulsamos una economía circular a través del reciclaje de componentes que de otro modo terminarían 
+            contaminando el entorno.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-prev swiper5-prev"></div>
+    <div class="swiper-button-next swiper5-next"></div>
+  </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
@@ -159,4 +248,20 @@
             },
         });
     });
+</script>
+
+<script>
+  const swiper5 = new Swiper('.mySwiper5', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.swiper5-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper5-next',
+      prevEl: '.swiper5-prev',
+    },
+  });
 </script>

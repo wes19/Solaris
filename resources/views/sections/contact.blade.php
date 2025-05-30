@@ -91,6 +91,8 @@
                       </div>
                   </div>
 
+                  {!! NoCaptcha::display() !!}
+
                   <div class="text-center">
                       <button type="submit"
                         class="bg-[#B1B1B1] text-white font-bold px-6 py-3 rounded hover:bg-blue-700 transition duration-200">
@@ -156,6 +158,8 @@
                             </div>
                         </div>
                     </div>
+
+                    {!! NoCaptcha::display() !!}
             
                     <div class="flex justify-center mt-6">
                         <button type="submit"
@@ -217,6 +221,8 @@
                             {!! $errors->first('file', '<p class="text-sm text-red-600 mt-1">:message</p>') !!}
                         </div>
                     </div>
+
+                    {!! NoCaptcha::display() !!}
             
                     <div class="md:col-span-2 text-center mt-6">
                         <button type="submit" class="bg-[#B1B1B1] text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition font-bold">Enviar</button>
@@ -409,4 +415,6 @@
     </a>      
   </div>
 </div>
+
+{!! NoCaptcha::renderJs() !!}
 
