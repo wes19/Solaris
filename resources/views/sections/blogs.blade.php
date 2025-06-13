@@ -24,6 +24,20 @@
       display: none;
     }
   }
+
+  .mySwiper1-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .swiper1-pagination {
+    flex: 1 1 auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+  }
 </style>
 
 
@@ -88,7 +102,7 @@
 
       <div class="mySwiper1-controls flex items-center justify-center gap-4 absolute bottom-0 left-0 w-full mt-4 z-20">
         <div class="swiper-button-prev swiper1-prev !static"></div>
-        <div class="swiper-pagination swiper1-pagination !static"></div>
+        <div class="swiper1-pagination !static"></div>
         <div class="swiper-button-next swiper1-next !static"></div>
       </div>
     </div>
@@ -103,7 +117,7 @@
       spaceBetween: 30,
       loop: true,
       pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper1-pagination',
       clickable: true,
       },
 

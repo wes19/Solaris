@@ -14,9 +14,10 @@ class IndexController extends Controller
     // Método para mostrar el blog
     public function blog(): \Illuminate\View\View
     {
-        $blogs = BlogSolari::all();
+        $blogs = BlogSolari::orderBy('created_at', 'desc')->get();
         return view('sections.blogs', compact('blogs'));
     }
+
 
     // Método para mostrar los productos
     public function producto(): \Illuminate\View\View
@@ -61,7 +62,7 @@ class IndexController extends Controller
         $news = BlogSolari::orderBy('created_at', 'desc')->take(3)->get();
         $proyectos = Proyecto::orderBy('created_at', 'desc')->get();
         $testimonios = Testimonio::all(); 
-        $blogs = BlogSolari::all();
+        $blogs = BlogSolari::orderBy('created_at', 'desc')->get();
         return view('welcome', compact('news', 'proyectos', 'testimonios', 'blogs'));
     }
 
