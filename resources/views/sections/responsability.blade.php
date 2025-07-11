@@ -1,9 +1,7 @@
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <style>
-    .swiper-container {
+    .swiper7 {
         width: 100%;
         height: 100%;
     }
@@ -23,7 +21,7 @@
 
 </style>
 
-<div class="swiper-container overflow-hidden hidden lg:block" id="RSE">
+<div class="swiper7 overflow-hidden hidden lg:block relative" id="RSE">
     <div class="swiper-wrapper">
 
         <!--Responsabilidad Ambiental-->
@@ -56,8 +54,6 @@
                         a otros a adoptar prácticas que favorezcan un planeta más saludable.</p>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
 
 
@@ -82,17 +78,15 @@
                      </p>
                 </div>
             </div>
-            <div class="swiper-button-next"></div> 
-            <div class="swiper-button-prev"></div>
         </div>
 
         <div class="swiper-slide bg-no-repeat bg-cover w-full flex xl:min-h-[875px] relative"
-        style="background-image: url('images/solaris-team.webp');">
-   
-            <div class="swiper-button-next"></div> 
-            <div class="swiper-button-prev"></div>
+             style="background-image: url('images/solaris-team.webp');">
+        
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span class="font-extrabold text-white tracking-widest" style="font-size:200px; opacity:0.7;">RSE</span>
+            </div>
         </div>
-
 
         <div class="swiper-slide w-full flex xl:min-h-[875px] h-full relative bg-white">
             
@@ -131,10 +125,10 @@
                     </p>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
+    <div class="swiper-button-next swiper7-button-next !text-white"></div>
+    <div class="swiper-button-prev swiper7-button-prev !text-white"></div>
 </div>
 
 
@@ -232,20 +226,16 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const swiper = new Swiper('.swiper-container', {
+    document.addEventListener("DOMContentLoaded", function() {
+        new Swiper('.swiper7', {
             loop: true,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,
-            // },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper7-button-next',
+                prevEl: '.swiper7-button-prev',
             },
+            slidesPerView: 1,
+            spaceBetween: 30,
         });
     });
 </script>

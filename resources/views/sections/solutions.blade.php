@@ -20,7 +20,7 @@
                         "Soluciones de Eficiencia Energética",
                         "Mantenimiento Preventivo",
                         "Mantenimiento Correctivo",
-                        "Respuestos"
+                        "Repuestos"
                     ];
                 @endphp
 
@@ -39,7 +39,7 @@
             <h1 class="uppercase text-[42px] sm:text-[64px] lg:text-[96px] leading-[86%] font-extrabold text-[#24317B] text-center lg:text-left">
                 Productos<br>y Soluciones
             </h1>
-            <p class="text-[#24317B] text-[16px] sm:text-[20px] lg:text-[24px] font-normal leading-[150%] mt-8 lg:mt-16 text-justify lg:text-left lg:mr-48">
+            <p class="text-[#24317B] text-[16px] sm:text-[20px] lg:text-[22px] font-normal leading-[150%] mt-8 lg:mt-16 text-justify lg:text-left lg:mr-48">
                 Solaris ofrece una gama completa de soluciones energéticas, que incluye la instalación de sistemas de paneles solares para hogares, empresas e industrias.
                 Nuestros servicios abarcan desde diseños de ingeniería, estudios de factibilidad, Suministro e instalación, monitoreo y mantenimiento. Cada solución es adaptada a las necesidades del cliente, asegurando el más rápido retorno sobre la inversión.
                 <br><br>
@@ -112,7 +112,7 @@
             'imagen' => 'mantenimiento-correctivo.webp'
         ],
         [
-            'titulo' => 'Respuestos',
+            'titulo' => 'Repuestos',
             'descripcion' => 'Proximamente...',
             'imagen' => ''
         ],
@@ -142,8 +142,8 @@
                             {!! nl2br(e($modal['descripcion'])) !!}
                         </p>
                     </div>
-                    <a href="https://solarismarkethn.com/" target="_blank" rel="noopener noreferrer"
-                       class="bg-[#66944D] text-[14px] sm:text-[16px] font-semibold uppercase self-start text-white px-5 py-2 rounded-[8px] mt-4 sm:mt-0">
+                    <a href="https://www.solarishn.com/#contactanos" class="bg-[#66944D] text-[14px] sm:text-[16px] font-semibold uppercase self-start text-white px-5 py-2 rounded-[8px] mt-4 sm:mt-0"
+                    onclick="closeModal({{ $index }})">
                        Cotizar
                     </a>
                 </div>

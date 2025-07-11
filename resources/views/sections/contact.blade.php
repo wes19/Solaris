@@ -1,5 +1,5 @@
 
-<div class="eco_mapdiv mx-[5%]" id="contactanos">
+<div class="eco_mapdiv mx-[5%]">
   <h2 class="uppercase text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[96px] font-semibold mb-4 text-[#24317B] mt-32">
     Contáctanos
   </h2>
@@ -7,7 +7,7 @@
     <iframe src="https://www.google.hn/maps/d/u/0/embed?mid=104kFL8LqPLpVIZ-is6sFlhKoft2zoteo" width="100%" height="480"></iframe>
 </div>
 
-<div class="max-w-3xl mx-auto px-4 py-6" x-data="{ tab: 'contacto' }">
+<div class="max-w-3xl mx-auto px-4 py-6" x-data="{ tab: 'contacto' }" id="contactanos">
     <!-- Tabs -->
     <ul class="flex justify-center mt-24">
       <li class="-mb-px mr-1">
@@ -91,7 +91,9 @@
                       </div>
                   </div>
 
-                  {!! NoCaptcha::display() !!}
+                  <div class="flex justify-center">
+                    {!! NoCaptcha::display() !!}
+                  </div>
 
                   <div class="text-center">
                       <button type="submit"
@@ -159,7 +161,9 @@
                         </div>
                     </div>
 
-                    {!! NoCaptcha::display() !!}
+                    <div class="flex justify-center">
+                      {!! NoCaptcha::display() !!}
+                    </div>
             
                     <div class="flex justify-center mt-6">
                         <button type="submit"
@@ -174,55 +178,59 @@
         <div x-show="tab === 'empleo'" x-cloak>
 
             <div class="max-w-5xl mx-auto px-4 py-8 border border-gray-300 rounded-lg p-6 shadow-sm">
-                <form action="{{ route('envioEmpleo') }}" method="POST" enctype="multipart/form-data" class="grid md:grid-cols-2 gap-6">
+                <form action="{{ route('envioEmpleo') }}" method="POST" enctype="multipart/form-data" class="w-full max-w-4xl">
                     @csrf
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-black">Nombre</label>
-                            <input type="text" name="nombre" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-black">Nombre</label>
+                                <input type="text" name="nombre" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+                
+                            <div>
+                                <label class="block text-sm font-medium text-black">Correo electrónico</label>
+                                <input type="email" name="correo" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+                
+                            <div>
+                                <label class="block text-sm font-medium text-black">Número de teléfono</label>
+                                <input type="text" name="telefono" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
                         </div>
-            
-                        <div>
-                            <label class="block text-sm font-medium text-black">Correo electrónico</label>
-                            <input type="email" name="correo" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        </div>
-            
-                        <div>
-                            <label class="block text-sm font-medium text-black">Número de teléfono</label>
-                            <input type="text" name="telefono" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-black">Experiencia</label>
+                                <select name="exp" class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="0" {{ old('exp') == 0 ? 'selected' : '' }}>Experiencia Laboral</option>
+                                    <option value="Practica profesional" {{ old('exp') == "Practica profesional" ? 'selected' : '' }}>Práctica profesional</option>
+                                    <option value="entre 1-2 años" {{ old('exp') == "entre 1-2 años" ? 'selected' : '' }}>entre 1-2 años</option>
+                                    <option value="entre 2-3 años" {{ old('exp') == "entre 2-3 años" ? 'selected' : '' }}>entre 2-3 años</option>
+                                    <option value="entre 3-4 años" {{ old('exp') == "entre 3-4 años" ? 'selected' : '' }}>entre 3-4 años</option>
+                                    <option value="entre 4-5 años" {{ old('exp') == "entre 4-5 años" ? 'selected' : '' }}>entre 4-5 años</option>
+                                    <option value="entre 5-6 años" {{ old('exp') == "entre 5-6 años" ? 'selected' : '' }}>entre 5-6 años</option>
+                                    <option value="más de 6 años" {{ old('exp') == "más de 6 años" ? 'selected' : '' }}>más de 6 años</option>
+                                </select>
+                                {!! $errors->first('exp', '<p class="text-sm text-red-600 mt-1">:message</p>') !!}
+                            </div>
+                
+                            <div>
+                                <label class="block text-sm font-medium text-black">Ciudad</label>
+                                <input type="text" name="ciudad" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+                
+                            <div>
+                                <label class="block text-sm font-medium text-black">Adjunte su CV</label>
+                                <input type="file" name="file" accept=".pdf,.doc,.docx" class="mt-1 block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+                                {!! $errors->first('file', '<p class="text-sm text-red-600 mt-1">:message</p>') !!}
+                            </div>
                         </div>
                     </div>
-            
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-black">Experiencia</label>
-                            <select name="exp" class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                <option value="0" {{ old('exp') == 0 ? 'selected' : '' }}>Experiencia Laboral</option>
-                                <option value="Practica profesional" {{ old('exp') == "Practica profesional" ? 'selected' : '' }}>Práctica profesional</option>
-                                <option value="entre 1-2 años" {{ old('exp') == "entre 1-2 años" ? 'selected' : '' }}>entre 1-2 años</option>
-                                <option value="entre 2-3 años" {{ old('exp') == "entre 2-3 años" ? 'selected' : '' }}>entre 2-3 años</option>
-                                <option value="entre 3-4 años" {{ old('exp') == "entre 3-4 años" ? 'selected' : '' }}>entre 3-4 años</option>
-                                <option value="entre 4-5 años" {{ old('exp') == "entre 4-5 años" ? 'selected' : '' }}>entre 4-5 años</option>
-                                <option value="entre 5-6 años" {{ old('exp') == "entre 5-6 años" ? 'selected' : '' }}>entre 5-6 años</option>
-                                <option value="más de 6 años" {{ old('exp') == "más de 6 años" ? 'selected' : '' }}>más de 6 años</option>
-                            </select>
-                            {!! $errors->first('exp', '<p class="text-sm text-red-600 mt-1">:message</p>') !!}
-                        </div>
-            
-                        <div>
-                            <label class="block text-sm font-medium text-black">Ciudad</label>
-                            <input type="text" name="ciudad" required class="w-full border border-black rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                        </div>
-            
-                        <div>
-                            <label class="block text-sm font-medium text-black">Adjunte su CV</label>
-                            <input type="file" name="file" accept=".pdf,.doc,.docx" class="mt-1 block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
-                            {!! $errors->first('file', '<p class="text-sm text-red-600 mt-1">:message</p>') !!}
-                        </div>
+                    
+                    <div class="flex justify-center mt-2">
+                      {!! NoCaptcha::display() !!}
                     </div>
-
-                    {!! NoCaptcha::display() !!}
             
                     <div class="md:col-span-2 text-center mt-6">
                         <button type="submit" class="bg-[#B1B1B1] text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition font-bold">Enviar</button>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Mi Sitio Web')</title>
+    <title>Energía Solar en Honduras | Solaris HN - Soluciones Solares Confiables</title>
+    <meta name="description" content="Solaris HN ofrece soluciones de energía solar en Honduras desde 1994. Expertos en instalación de paneles solares residenciales, comerciales e industriales.">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="{{ asset('images/Logo-blanco-Solaris.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
@@ -182,6 +185,7 @@
         
     </script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.swiper-container', {
@@ -191,6 +195,20 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+        });
+    </script>
+    <script>
+        const formIds = ['contact-form', 'distribuidor-form', 'empleo-form'];
+        formIds.forEach(function(id) {
+            const form = document.getElementById(id);
+            if(form){
+                form.addEventListener('submit', function(e) {
+                    if (grecaptcha.getResponse() === '') {
+                        e.preventDefault();
+                        alert('Por favor verifica que no eres un robot.');
+                    }
+                });
+            }
         });
     </script>
 
