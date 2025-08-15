@@ -91,9 +91,8 @@
                       </div>
                   </div>
 
-                  <div class="flex justify-center">
-                    {!! NoCaptcha::display() !!}
-                  </div>
+                  <input type="hidden" name="recaptcha_token" id="recaptcha_token_contacto">
+                  <input type="hidden" name="recaptcha_action" value="contacto">
 
                   <div class="text-center">
                       <button type="submit"
@@ -161,9 +160,8 @@
                         </div>
                     </div>
 
-                    <div class="flex justify-center">
-                      {!! NoCaptcha::display() !!}
-                    </div>
+                    <input type="hidden" name="recaptcha_token" id="recaptcha_token_distribuidor">
+                    <input type="hidden" name="recaptcha_action" value="distribuidor">
             
                     <div class="flex justify-center mt-6">
                         <button type="submit"
@@ -228,9 +226,8 @@
                         </div>
                     </div>
                     
-                    <div class="flex justify-center mt-2">
-                      {!! NoCaptcha::display() !!}
-                    </div>
+                    <input type="hidden" name="recaptcha_token" id="recaptcha_token_empleo">
+                    <input type="hidden" name="recaptcha_action" value="empleo">
             
                     <div class="md:col-span-2 text-center mt-6">
                         <button type="submit" class="bg-[#B1B1B1] text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition font-bold">Enviar</button>
@@ -424,5 +421,46 @@
   </div>
 </div>
 
-{!! NoCaptcha::renderJs() !!}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const siteKey = "{{ config('services.recaptcha.site') }}";
+
+
+  // Mapea: formId -> { tokenInputId, action, errorSelector, submitButtonSelector }
+  const forms = [
+    { formId: 'contact-form',       tokenId: 'recaptcha_token_contacto',     action: 'contacto',     errSel: '#contact-form #err',       btnSel: '#contact-form button[type="submit"]' },
+    { formId: 'distribuidor-form',  tokenId: 'recaptcha_token_distribuidor', action: 'distribuidor', errSel: '#distribuidor-form ~ * #err, #distribuidor-form #err', btnSel: '#distribuidor-form button[type="submit"]' },
+    { formId: 'empleo-form',        tokenId: 'recaptcha_token_empleo',       action: 'empleo',       errSel: '#empleo-form #err',        btnSel: '#empleo-form button[type="submit"]' },
+  ];
+
+  forms.forEach(({ formId, tokenId, action, errSel, btnSel }) => {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      // Evita doble submit hasta tener token
+      if (form.dataset.rcpReady === '1') return; 
+      e.preventDefault();
+
+      const btn = form.querySelector(btnSel) || form.querySelector('button[type="submit"]');
+      const errEl = document.querySelector(errSel) || form.querySelector('#err');
+
+      if (btn) btn.disabled = true;
+      if (errEl) errEl.textContent = '';
+
+      grecaptcha.ready(function() {
+        grecaptcha.execute(siteKey, { action }).then(function(token) {
+          document.getElementById(tokenId).value = token;
+          // Marca que ya tenemos token para evitar loop
+          form.dataset.rcpReady = '1';
+          form.submit();
+        }).catch(() => {
+          if (btn) btn.disabled = false;
+          if (errEl) errEl.textContent = 'No se pudo validar reCAPTCHA. Intenta de nuevo.';
+        });
+      });
+    }, { passive: false });
+  });
+});
+</script>
 

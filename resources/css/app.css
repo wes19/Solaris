@@ -80,4 +80,7 @@
     background-color: #24317B;
     border-radius: 2px;
   }
-  
+
+  .grecaptcha-badge {
+    bottom: 120px !important;
+  }

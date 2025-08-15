@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site') }}"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -195,20 +196,6 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
-        });
-    </script>
-    <script>
-        const formIds = ['contact-form', 'distribuidor-form', 'empleo-form'];
-        formIds.forEach(function(id) {
-            const form = document.getElementById(id);
-            if(form){
-                form.addEventListener('submit', function(e) {
-                    if (grecaptcha.getResponse() === '') {
-                        e.preventDefault();
-                        alert('Por favor verifica que no eres un robot.');
-                    }
-                });
-            }
         });
     </script>
 
