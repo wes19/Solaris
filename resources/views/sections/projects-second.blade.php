@@ -23,6 +23,22 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
 
           <div class="text-center">
+              <a href="https://www.youtube.com/watch?v=XYkKBHD1Aws" target="_blank">
+                <div class="bg-white shadow-md rounded-xl overflow-hidden relative h-[250px]">
+                  <img src="{{ asset('images/honduras-plywood.webp') }}" alt="Midence Soto" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <svg width="67" height="76" viewBox="0 0 67 76" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M64.5 33.6699C67.8333 35.5944 67.8333 40.4056 64.5 42.3301L7.5 75.2391C4.16667 77.1636 0 74.758 0 70.909V5.09103C0 1.24203 4.16666 -1.16359 7.5 0.760906L64.5 33.6699Z"/>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+              <div class="mt-2 text-[16px] md:text-[20px] font-semibold text-[#24317B]">
+                Proyecto Honduras Plywood
+              </div>
+          </div>
+          
+          <div class="text-center">
               <a href="https://www.youtube.com/watch?v=Cu-tKp0HraU" target="_blank">
                 <div class="bg-white shadow-md rounded-xl overflow-hidden relative h-[250px]">
                   <img src="{{ asset('images/midence-soto.webp') }}" alt="Midence Soto" class="w-full h-full object-cover">
