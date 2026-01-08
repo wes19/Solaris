@@ -38,9 +38,15 @@
     </div>
 </div>
 
-<div id="dotlottie-container" class="fixed top-[60%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 z-[-1]">
-    <dotlottie-player id="lottiePlayer" src="https://lottie.host/444703e1-31d7-4100-8db4-11cb519a5096/l3MZhb8ZV5.lottie"
-        background="transparent" style="width: 150vw; height: 5%" loop></dotlottie-player>
+<div id="dotlottie-container" class="fixed top-[60%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 z-[-1] pointer-events-none">
+  <dotlottie-player
+    id="lottiePlayer"
+    src="/images/PANEL12.lottie"
+    background="transparent"
+    style="width:150vw; height:5%;"
+    loop
+    autoplay>
+  </dotlottie-player>
 </div>
 
 @section('scripts')
